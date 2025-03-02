@@ -1,0 +1,69 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %} 
+<section id="hero2" class="d-flex align-items-center">
+    <div class="image-background">
+        <img src="{% static 'img/slider-1-4.jpg' %}">
+    </div>
+    <div class="fade-overlay"></div>
+    <div class="fade-overlay"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
+                <br>
+                <br>
+                <h1>News</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Hero -->
+<br>
+<br>
+
+<!-- News Section -->
+<section id="news" class="news-section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Latest News</h2>
+        <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+            <!-- News Card 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="news-card">
+                    <img src="{% static 'img/news/news-1.jpg' %}" class="img-fluid" alt="News 1">
+                    <div class="news-content">
+                        <h3>Exciting Update Coming </h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+                        {% comment %} <a href="#" class="read-more">Read More</a> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+            <!-- News Card 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="news-card">
+                    <img src="{% static 'img/news/news-2.jpg' %}" class="img-fluid" alt="News 2">
+                    <div class="news-content">
+                        <h3>New Features Announced</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo pharetra dolor.</p>
+                        {% comment %} <a href="#" class="read-more">Read More</a> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+            <!-- News Card 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="news-card">
+                    <img src="{% static 'img/news/news-3.png' %}" class="img-fluid" alt="News 3">
+                    <div class="news-content">
+                        <h3>New certificate</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae urna euismod, tincidunt nisi.</p>
+                        {% comment %} <a href="#" class="read-more">Read More</a> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End News Section -->
+
+{% endblock %}

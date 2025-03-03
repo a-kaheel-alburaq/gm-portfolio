@@ -3928,13 +3928,17 @@ section {
 /* Vertical Line Between Rows */
 .timeline-row:nth-child(odd)::after,
 .timeline-row:nth-child(even)::after {
-  content: "";
+  content: "➤";
+  font-size: 24px;
+  color: #fdb417;
   position: absolute;
-  background: #fdb417;
-  width: 2px;
-  height: 150px;
-  top: 100%;
+  /* background: #fdb417; */
+  /* width: 2px; */
+  /* height: 150px; */
+  top: 95%;
   left: 75%;
+  transform: rotate(90deg);
+
 }
 
 .timeline-row:last-child::after {

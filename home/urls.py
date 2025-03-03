@@ -41,4 +41,7 @@ urlpatterns = [
     
     # Branches
     path('branches/', views.branches, name='branches'),
+    
+    # Vendor
+    path('vendor/', views.vendor, name='vendor'),
 ]

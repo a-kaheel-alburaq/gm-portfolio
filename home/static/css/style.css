@@ -3777,8 +3777,77 @@ section {
 }
 
 /*--------------------------------------------------------------
-#  Maze Timeline 
+#  Maze Timeline ( Heritage page )
 --------------------------------------------------------------*/
+.timeline-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.timeline-arrow {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fdb417;
+  /* Matches the timeline color */
+}
+
+/* Timeline Row */
+.timeline-row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo in the middle of timeline row */
+.timeline-logo {
+  position: relative;
+  width: 80px;
+  /* Adjust logo size */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fdb417;
+}
+
+.timeline-logo img {
+  width: 100%;
+  height: auto;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fdb417;
+}
+
+.timeline-logo-l {
+  position: relative;
+  width: 80px;
+  /* Adjust logo size */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fdb417;
+  transform: scaleX(-1);
+
+}
+
+.timeline-logo-l img {
+  width: 100%;
+  height: auto;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fdb417;
+  transform: scaleX(-1);
+}
+
 /* General Timeline Styling */
 #timeline {
   position: relative;
@@ -3789,16 +3858,6 @@ section {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-
-/* Timeline Row */
-.timeline-row {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 /* Timeline Card */
@@ -3917,6 +3976,7 @@ section {
     height: 2px;
   }
 }
+
 
 /*--------------------------------------------------------------
 #  Flag icons

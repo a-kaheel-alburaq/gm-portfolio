@@ -111,3 +111,6 @@ def job_details(request):
 # Branches
 def branches(request):
     return render(request, 'home/branches.html')
+
+def vendor(request):
+    return render(request, 'home/vendor.html')

@@ -7,7 +7,7 @@
   <!-- Hero Section -->
   <section id="hero2" class="d-flex align-items-center">
       <div class="image-background">
-        <img src="{% static 'img/saudi_vision_2030.jpg' %}" class="fade-in">
+        <img src="{% static 'img/saudi_vision_2030.png' %}" class="fade-in">
       </div>
       <div class="fade-overlay"></div>
       <div class="container">
@@ -15,7 +15,7 @@
           <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
             <br>
             <br>
-            <h1 class="section-title">Saudi Vision 2030</h1>
+            
           </div>
         </div>
       </div>
@@ -85,4 +85,9 @@
   </section>
 </div>
 
+<script>
+    const vhToPx = (vh) => (vh / 100) * window.innerHeight;
+    console.log(vhToPx(70)); // Outputs the pixel value
+    
+</script>
 {% endblock %}

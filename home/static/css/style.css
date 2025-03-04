@@ -3915,15 +3915,7 @@ section {
 }
 
 /* Horizontal Line Connecting Cards in Same Row */
-.timeline-row::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  height: 2px;
-  background: #fdb417;
-  width: calc(90% - 100px);
-  left: 5%;
-}
+
 
 /* Vertical Line Between Rows */
 .timeline-row:nth-child(odd)::after,

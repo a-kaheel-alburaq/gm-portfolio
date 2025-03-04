@@ -3878,7 +3878,7 @@ section {
   /* Initially hidden */
   transform: translateY(30px);
   /* Slightly shifted downward */
-  animation: fadeInUp 0.6s forwards;
+  animation: fadeInUp 0s forwards;
 }
 
 /* Keyframes for Animation */
@@ -3890,7 +3890,7 @@ section {
 }
 
 /* Apply staggered animation delay */
-.timeline-card:nth-child(1) {
+/* .timeline-card:nth-child(1) {
   animation-delay: 0s;
 }
 
@@ -3912,10 +3912,18 @@ section {
 
 .timeline-card:nth-child(6) {
   animation-delay: 1.5s;
-}
+} */
 
 /* Horizontal Line Connecting Cards in Same Row */
-
+/* .timeline-row::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  background: #fdb417;
+  width: calc(90% - 100px);
+  left: 5%;
+} */
 
 /* Vertical Line Between Rows */
 .timeline-row:nth-child(odd)::after,

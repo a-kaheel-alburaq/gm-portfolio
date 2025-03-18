@@ -4726,12 +4726,14 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-/* html body.vsc-initialized main section#portfolio.portfolio.col-lg-12 {
-  margin-left: 99% !important;
-} */
-html body main section {
+html body.vsc-initialized main section#portfolio.portfolio.col-lg-12 {
   margin-left: 9% !important;
 }
+
+/* 
+html body main section {
+  margin-left: 9% !important;
+} */
 
 #portfolio {
   padding: 0px !important;

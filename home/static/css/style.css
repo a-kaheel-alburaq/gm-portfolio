@@ -1394,7 +1394,8 @@ textarea {
 --------------------------------------------------------------*/
 #portfolio-flters1 {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  /* Center the icons instead of spacing them around */
   align-items: center;
   list-style: none;
   padding: 0;
@@ -1403,12 +1404,13 @@ textarea {
 }
 
 .container.first-filter {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  justify-content: center;
+  /* Center the child elements horizontally */
   margin-right: -15px;
-  margin-left: -393px;
+  margin-left: 0;
+  /* Ensure no unnecessary margins */
 }
 
 /*--------------------------------------------------------------
@@ -2989,6 +2991,7 @@ section {
   align-items: flex-start;
   /* Align items at the top */
 }
+
 
 /* .vertical-filter {} */
 
@@ -4723,7 +4726,10 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-html body.vsc-initialized main section#portfolio.portfolio.col-lg-12 {
+/* html body.vsc-initialized main section#portfolio.portfolio.col-lg-12 {
+  margin-left: 99% !important;
+} */
+html body main section {
   margin-left: 9% !important;
 }
 
@@ -4731,12 +4737,6 @@ html body.vsc-initialized main section#portfolio.portfolio.col-lg-12 {
   padding: 0px !important;
 }
 
-.portfolio .container {
-  display: block;
-  /* Override the flex display */
-  gap: 0;
-  /* Remove gap if needed */
-}
 
 .portfolio .portfolio-item {
   margin-bottom: 30px;

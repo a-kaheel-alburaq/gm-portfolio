@@ -1419,19 +1419,21 @@ div .row.inner-filter {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  flex-basis: 100%;
   /* margin-right: -15px; */
   /* margin-left: 220px; */
 }
 
 /* General UL Styling */
 #portfolio-flters {
+  flex-basis: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 90px;
+  /* gap: 20px; */
 }
 
 /* Styling for LI elements */

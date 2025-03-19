@@ -57,74 +57,54 @@
 
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
-        <div class="container-fluid d-flex align-items-center justify-content-between">
-          <!-- Online Store Button (Left - Mobile Only) -->
-          <div class="get-started-mobile d-lg-none">
-            <a href="#about" 
-               style="font-weight: bold; transition: all 0.3s ease-out;" 
-               onmouseover="this.style.boxShadow='0 0 10px rgba(0,0,0,0.5)'" 
-               onmouseout="this.style.boxShadow='none'">
-              Online store 🛒
-            </a>
-          </div>
-      
-          <!-- Logo (Center) -->
-          <div class="logo text-center">
-            <a href="index.html">
-              <img src="{% static '/img/logo.png' %}" alt="Logo" class="img-fluid">
-            </a>
-          </div>
-      
-          <!-- Sidebar Toggle Button (Right - Mobile Only) -->
-          <div class="mobile-nav-toggle d-lg-none">
-            <i class="icofont-navigation-menu"></i>
-          </div>
-      
-          <!-- Desktop Navigation Menu -->
-          <nav class="nav-menu d-none d-lg-block">
+        <div class="container-fluid d-flex">
+
+            <div class="logo mr-auto">
+                <a href="index.html"><img src="{% static '/img/logo.png' %}" alt="" class="img-fluid"></a>
+            </div>
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li class="drop-down"><a href="">About us</a>
+                        <ul>
+                            <li><a href="{% url 'about' %}">Who we are </a></li>
+                            <li><a href="{% url 'heritage' %}">Heritage</a></li>
+                            {% comment %} <li><a href="{% url 'team' %}">Team</a></li> {% endcomment %}
+                            <li><a href="{% url 'corporate-governance' %}">Corporate Governance</a></li>
+                            <li><a href="{% url 'vision-mission-values' %}">Vision & Mission & Values</a></li>
+            
+                        </ul>
+            <li><a href="{% url 'meats' %}">Products</a></li>
+            <li><a href="{% url 'branches' %}">Branches</a></li>
+            <li class="drop-down"><a href="">Commitments</a>
+                <ul>
+                    <li><a href="{% url 'sustainability' %}">Sustainability</a></li>
+                    <li><a href="{% url 'saudi-vision' %}">Saudi Vision 2030</a></li>
+                </ul>
+            </li>
+
+            <li class="drop-down"><a href="">Media</a>
             <ul>
-              <li><a href="{% url 'home' %}">Home</a></li>
-              <li class="drop-down">
-                <a href="">About us</a>
-                <ul>
-                  <li><a href="{% url 'about' %}">Who we are</a></li>
-                  <li><a href="{% url 'heritage' %}">Heritage</a></li>
-                  {% comment %}<li><a href="{% url 'team' %}">Team</a></li>{% endcomment %}
-                  <li><a href="{% url 'corporate-governance' %}">Corporate Governance</a></li>
-                  <li><a href="{% url 'vision-mission-values' %}">Vision & Mission & Values</a></li>
-                </ul>
-              </li>
-              <li><a href="{% url 'meats' %}">Products</a></li>
-              <li><a href="{% url 'branches' %}">Branches</a></li>
-              <li class="drop-down">
-                <a href="">Commitments</a>
-                <ul>
-                  <li><a href="{% url 'sustainability' %}">Sustainability</a></li>
-                  <li><a href="{% url 'saudi-vision' %}">Saudi Vision 2030</a></li>
-                </ul>
-              </li>
-              <li class="drop-down">
-                <a href="">Media</a>
-                <ul>
-                  <li><a href="{% url 'photos-videos' %}">Photos & videos</a></li>
-                  <li><a href="{% url 'news-insights' %}">News & insights</a></li>
-                </ul>
-              </li>
-              <li><a href="{% url 'careers' %}">Careers</a></li>
-              <li><a href="{% url 'vendor' %}">Vendor</a></li>
-              <li><a href="{% url 'contact-info' %}">Contact us</a></li>
-              <li class="get-started">
-                <a href="#about" 
-                   style="font-weight: bold; transition: all 0.3s ease-out;" 
-                   onmouseover="this.style.boxShadow='0 0 10px rgba(0,0,0,0.5)'" 
-                   onmouseout="this.style.boxShadow='none'">
-                  Online store 🛒
-                </a>
-              </li>
+                <li><a href="{% url 'photos-videos' %}">Photos & videos</a></li>
+                <li><a href="{% url 'news-insights' %}">News & insights</a></li>
             </ul>
-          </nav><!-- .nav-menu -->
+        </li>
+
+        <li><a href="{% url 'careers' %}">Careers</a></li>
+        <li><a href="{% url 'vendor' %}">Vendor</a></li>
+        <li ><a href="{% url 'contact-info' %}">Contact us</a></li>
+        
+        
+                    <li class="get-started"><a href="#about" style="font-weight: bold; transition: all 0.3s ease-out;" onmouseover="this.style.boxShadow='0 0 10px rgba(0,0,0,0.5)'" onmouseout="this.style.boxShadow='none'">Online store 🛒</a></li>
+                    
+                </ul>
+                    
+            </nav><!-- .nav-menu -->
+
         </div>
-      </header><!-- End Header -->
+
+    </header><!-- End Header -->
 
         <main>
         {% block content %}{% endblock %}

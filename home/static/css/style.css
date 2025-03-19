@@ -2707,6 +2707,27 @@ section {
   }
 }
 
+/* Default: Hide Mobile View */
+.mobile-view {
+  display: none;
+}
+
+/* Desktop View */
+.desktop-view {
+  display: block;
+}
+
+/* Mobile (below 992px) */
+@media (max-width: 992px) {
+  .desktop-view {
+    display: none;
+  }
+
+  .mobile-view {
+    display: block;
+  }
+}
+
 
 /*--------------------------------------------------------------
 #  slideshow home page (index)

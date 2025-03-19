@@ -2726,6 +2726,22 @@ section {
   .mobile-view {
     display: block;
   }
+
+  .image-border {
+    bottom: -30px;
+    left: -47px;
+    width: calc(100% + -115px);
+    height: calc(100% - 40px);
+    border: 3px solid #fdb417;
+    animation: zumpBottom 2s linear infinite;
+    z-index: 1;
+    padding-right: 55px;
+  }
+
+  .main-image {
+    position: relative;
+    z-index: 2;
+  }
 }
 
 

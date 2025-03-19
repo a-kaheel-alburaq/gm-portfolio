@@ -4245,33 +4245,6 @@ h6,
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-@media (max-width: 991px) {
-  .container-fluid.d-flex {
-    justify-content: space-between;
-    position: relative;
-  }
-
-  .get-started {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .mobile-nav-toggle {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
-
 #header {
   height: 72px;
   transition: all 0.5s;

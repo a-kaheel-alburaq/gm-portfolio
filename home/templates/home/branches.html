@@ -45,7 +45,7 @@
       </div>
     </div>
 
-    <!-- Branch Information Cards (2 columns and 2 rows) -->
+    <!-- Branch Information Cards (4 columns) -->
     <div class="row branch-cards">
         <div class="col-3">
           <div class="card branch-card small-card">
@@ -116,6 +116,78 @@
         </div>
       </div>
     </div>
+
+    <!-- for mobile -->
+    <div class="row branch-cards">
+      <div class="col-12">
+        <div class="card branch-card small-card">
+          <img src="{% static 'img/whoweare/2.jpg' %}" alt="Branch 1">
+          <h3 class="branch-name">Riyadh Branch</h3>
+          <hr>
+          <div class="branch-details">
+            <p class="branch-address">
+              <i class="fas fa-map-marker-alt"></i> 1234 Main St, Riyadh, Saudi Arabia
+            </p>
+            <p class="branch-contact">
+              <i class="fas fa-phone"></i> +966114133338
+            </p>
+          </div>
+          <a href="https://www.google.com/maps" target="_blank" class="btn-directions">Get Directions</a>
+        </div>
+      </div>
+    
+      <div class="col-12">
+        <div class="card branch-card small-card">
+          <img src="{% static 'img/whoweare/2.jpg' %}" alt="Branch 2">
+          <h3 class="branch-name">Dammam Branch</h3>
+          <hr>
+          <div class="branch-details">
+            <p class="branch-address">
+              <i class="fas fa-map-marker-alt"></i> 1234 Main St, Dammam, Saudi Arabia
+            </p>
+            <p class="branch-contact">
+              <i class="fas fa-phone"></i> +966114133338
+            </p>
+          </div>
+          <a href="https://www.google.com/maps" target="_blank" class="btn-directions">Get Directions</a>
+        </div>
+      </div>
+    
+      <div class="col-12">
+        <div class="card branch-card small-card">
+          <img src="{% static 'img/whoweare/2.jpg' %}" alt="Branch 3">
+          <h3 class="branch-name">Jeddah Branch</h3>
+          <hr>
+          <div class="branch-details">
+            <p class="branch-address">
+              <i class="fas fa-map-marker-alt"></i> 1234 Main St, Jeddah, Saudi Arabia
+            </p>
+            <p class="branch-contact">
+              <i class="fas fa-phone"></i> +966114133338
+            </p>
+          </div>
+          <a href="https://www.google.com/maps" target="_blank" class="btn-directions">Get Directions</a>
+        </div>
+      </div>
+    
+      <div class="col-12">
+        <div class="card branch-card small-card">
+          <img src="{% static 'img/whoweare/2.jpg' %}" alt="Branch 4">
+          <h3 class="branch-name">South Branch</h3>
+          <hr>
+          <div class="branch-details">
+            <p class="branch-address">
+              <i class="fas fa-map-marker-alt"></i> 1234 Main St, Southern Region, Saudi Arabia
+            </p>
+            <p class="branch-contact">
+              <i class="fas fa-phone"></i> +966114133339
+            </p>
+          </div>
+          <a href="https://www.google.com/maps" target="_blank" class="btn-directions">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 </section>
 
@@ -169,4 +241,6 @@
     card.classList.add('hidden');
   }
 </script>
+
+
 {% endblock %}

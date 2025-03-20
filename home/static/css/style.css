@@ -557,19 +557,7 @@ input[type="date"]:valid+.date-placeholder {
   transform: translate(-50%, -110%);
 }
 
-@media (max-width: 767px) {
 
-  .branch-details-card {
-    position: absolute;
-    width: 100%;
-    padding: 15px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    z-index: 10;
-    transform: translate(-50%, -110%);
-  }
-}
 
 .branch-details-card.hidden {
   opacity: 0;
@@ -690,7 +678,21 @@ input[type="date"]:valid+.date-placeholder {
 .col-3 .card .branch-card .small-card {
   padding-right: 0px !important;
   padding-left: 0px !important;
+}
 
+@media (max-width: 767px) {
+  .row.branch-cards .col-3 {
+    display: none;
+  }
+
+  .col-12 .card.branch-card.small-card {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    margin-right: 15px !important;
+    margin-left: 15px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
 }
 
 /* Branch Information Cards */

@@ -557,6 +557,20 @@ input[type="date"]:valid+.date-placeholder {
   transform: translate(-50%, -110%);
 }
 
+@media (max-width: 767px) {
+
+  .branch-details-card {
+    position: absolute;
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 10;
+    transform: translate(-50%, -110%);
+  }
+}
+
 .branch-details-card.hidden {
   opacity: 0;
   transform: translateX(-50%);

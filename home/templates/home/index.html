@@ -260,6 +260,8 @@ width: 100;
 
 
 <!-- ======= Briefe section (6 boxes) ======= -->
+<div class="desktop-view-circles">
+
 <section id="company-stats" class="py-5" style="padding-bottom:19rem !important;">
   <div class="container">
     <div class="row">
@@ -335,6 +337,9 @@ width: 100;
     </div>
   </div>
 </section>
+</div>
+
+{% include 'home/mobile/index/circles.html' %}
 
 <!-- Products carousel -->
 <section id="products" class="products section-bg">
@@ -516,7 +521,10 @@ width: 100;
       <!-- Middle Image -->
       <div class="col-lg-2 d-flex justify-content-center">
           <img src="{% static 'img/why-choose.png' %}" class="img-fluid overlay-image2 position-absolute bottom-0 end-0" alt="Overlay Image">
+          <!-- Middle Image For mobile -->
+          <img src="{% static 'img/overlay-image.png' %}" class="img-fluid overlay-image2-mobile position-absolute bottom-0 end-0" alt="Overlay Image">
       </div>
+
 
       <!-- Right Column -->
       <div class="col-lg-5">

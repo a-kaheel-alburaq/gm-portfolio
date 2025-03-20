@@ -3556,6 +3556,7 @@ section {
   /* Prevent content overflow during animation */
   transition: box-shadow 0.3s ease;
   /* Subtle hover effect */
+  margin-bottom: 5px;
 }
 
 .card-expandable:hover {

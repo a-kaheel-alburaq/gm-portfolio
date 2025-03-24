@@ -1634,10 +1634,10 @@ div .row.inner-filter {
     height: calc(100vh - 72px);
   }
 
-  #hero2 .animated {
+  /* #hero2 .animated {
     -webkit-animation: none;
     animation: none;
-  }
+  } */
 
   #hero2 .hero-img {
     text-align: center;
@@ -3052,10 +3052,10 @@ section {
     height: calc(100vh - 72px);
   }
 
-  #heroCarousel .animated {
+  /* #heroCarousel .animated {
     -webkit-animation: none;
     animation: none;
-  }
+  } */
 
   #heroCarousel .hero-img {
     text-align: center;

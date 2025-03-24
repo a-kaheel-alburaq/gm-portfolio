@@ -2834,6 +2834,16 @@ section {
   display: block;
 }
 
+@media (max-width: 992px) {
+  .desktop-view-heritage {
+    display: none;
+  }
+
+  .mobile-view-heritage {
+    display: block;
+  }
+}
+
 /* Mobile (below 992px) */
 @media (max-width: 992px) {
   .desktop-view {
@@ -4139,108 +4149,89 @@ section {
   line-height: 1.6;
 }
 
-/* Responsive design for small screens */
-@media (max-width: 768px) {
-  .timeline-card {
+@media (max-width: 991px) {
+  #timeline {
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+  }
+
+  .heritage-container-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  /* Mobile Timeline Item */
+  .timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     width: 100%;
-    margin-bottom: 20px;
+    max-width: 350px;
+    margin-bottom: 30px;
+    position: relative;
   }
 
-  .timeline-line {
+  /* Mobile Timeline Logo */
+  .timeline-logo {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border: 3px solid #fdb417;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .timeline-logo img {
+    width: 40px;
+    height: auto;
+  }
+
+  /* Mobile Timeline Content */
+  .timeline-content {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    position: relative;
+  }
+
+  /* Mobile-Only Downward Arrow */
+  .timeline-item::after {
+    content: "↓";
+    font-size: 24px;
+    color: #fdb417;
+    position: absolute;
+    bottom: -20px;
     left: 50%;
-    height: 2px;
-  }
-}
-
-/* Responsive design for small screens */
-@media (max-width: 768px) {
-  /* Mobile-Only Styles */
-  @media (max-width: 768px) {
-    #timeline {
-      padding: 40px 20px;
-      background-color: #f8f8f8;
-    }
-
-    .heritage-container-mobile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-    }
-
-    /* Mobile Timeline Item */
-    .timeline-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      width: 100%;
-      max-width: 350px;
-      margin-bottom: 30px;
-      position: relative;
-    }
-
-    /* Mobile Timeline Logo */
-    .timeline-logo {
-      width: 60px;
-      height: 60px;
-      background: white;
-      border: 3px solid #fdb417;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 10px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .timeline-logo img {
-      width: 40px;
-      height: auto;
-    }
-
-    /* Mobile Timeline Content */
-    .timeline-content {
-      background: white;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      width: 90%;
-      max-width: 300px;
-      text-align: center;
-      position: relative;
-    }
-
-    /* Mobile-Only Downward Arrow */
-    .timeline-item::after {
-      content: "↓";
-      font-size: 24px;
-      color: #fdb417;
-      position: absolute;
-      bottom: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    /* Hide arrow for last item */
-    .timeline-item:last-child::after {
-      display: none;
-    }
-
-    .timeline-content h3 {
-      font-size: 18px;
-      color: #333;
-      margin-bottom: 5px;
-    }
-
-    .timeline-content p {
-      font-size: 14px;
-      color: #666;
-    }
+    transform: translateX(-50%);
   }
 
+  /* Hide arrow for last item */
+  .timeline-item:last-child::after {
+    display: none;
+  }
 
+  .timeline-content h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  .timeline-content p {
+    font-size: 14px;
+    color: #666;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -4669,7 +4660,7 @@ h6,
   right: 15px;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 777px) {
   .nav-menu .drop-down .drop-down ul {
     left: -90%;
   }
@@ -4680,6 +4671,31 @@ h6,
 
   .nav-menu .drop-down .drop-down>a:after {
     content: "\ea9d";
+  }
+}
+
+@media (max-width: 1245px) {
+  .nav-menu {
+    display: none !important;
+    /* Hide main navbar */
+  }
+
+  .mobile-nav-toggle {
+    display: block !important;
+    /* Show mobile menu toggle button */
+  }
+}
+
+@media (min-width: 1246px) {
+  .nav-menu {
+    display: flex !important;
+    /* Show main navbar */
+  }
+
+  .mobile-nav-toggle,
+  .mobile-nav {
+    display: none !important;
+    /* Hide mobile menu */
   }
 }
 

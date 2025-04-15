@@ -2590,12 +2590,42 @@ section {
   /* Ensure it is on top of other content */
 }
 
+
 .modal-content {
   position: relative;
   width: 80%;
   max-width: 800px;
   background-color: white;
   padding: 20px;
+  overflow: hidden;
+}
+
+/*tablet about us section*/
+.image-border-tablet {
+  position: absolute;
+  bottom: -20px;
+  left: 10px;
+  width: 85%;
+  height: calc(100% - 40px);
+  border: 3px solid #fdb417;
+  animation: zumpBottom 2s linear infinite;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.main-image-tablet {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  border-radius: 12px;
+}
+
+
+
+.modal-content video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .close-btn:hover {
@@ -2644,9 +2674,6 @@ section {
     display: block;
   }
 }
-
-
-
 
 /*--------------------------------------------------------------
 #  slideshow home page (index)
@@ -5753,6 +5780,27 @@ Tablet screens, where tablet usually is between 768px and 992px
     position: absolute;
     animation: zumpBottom 2s linear infinite;
   }
+
+  .modal-content {
+    max-width: 90%;
+  }
+
+  .overlay-image-tablet {
+    width: 70px;
+    bottom: -10px;
+    left: 0%;
+    position: absolute;
+    animation: zumpBottom 2s linear infinite;
+    z-index: 3;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  .video-button img {
+    width: 50px;
+    height: 50px;
+  }
+
 }
 
 @media (min-width: 1030px) {
@@ -5806,5 +5854,136 @@ Tablet screens, where tablet usually is between 768px and 992px
     left: 165px;
     position: absolute;
     animation: zumpBottom 2s linear infinite;
+  }
+}
+
+
+
+/*test*/
+/* Wrapper for the section */
+.video-section-wrapper {
+  height: 300px;
+  position: relative;
+  gap: 20px;
+}
+
+/* Centered video play button */
+.video-button-centered {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  font-family: 'Arial', sans-serif;
+  bottom: 0;
+  /* left: 415px; */
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: var(--boskery-base, #fdb417);
+  color: #fff;
+  font-size: 24px;
+  z-index: 4;
+  /* top: 1px; */
+  /* right: 10px; */
+  position: absolute;
+  text-decoration: none;
+  border-radius: 10%;
+  animation: popupVideo 3s infinite;
+  transition: background-color 2s ease;
+  border: none;
+
+}
+
+/* Overlay images */
+.overlay-image-tablet {
+  width: 60px;
+  height: auto;
+  z-index: 1;
+  animation: zumpBottom 2s linear infinite;
+}
+
+.left-overlay {
+  position: relative;
+}
+
+.right-overlay {
+  position: relative;
+}
+
+/* Video Modal */
+.video-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  padding: 1rem;
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.modal-content video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  background: transparent;
+  border: none;
+  color: #666;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Bounce Animation */
+@keyframes zumpBottom {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* Tablet & Mobile adjustments */
+@media (max-width: 1024px) {
+  .video-section-wrapper {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: auto;
+    padding: 40px 10px;
+  }
+
+  .video-button-centered img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .overlay-image-tablet {
+    width: 50px;
   }
 }

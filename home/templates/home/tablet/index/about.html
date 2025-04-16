@@ -21,7 +21,8 @@
           <div id="video-modal-tablet" class="video-modal">
             <div class="modal-content">
               <button id="close-video-tablet" class="close-btn">X</button>
-              <video id="internal-video-tablet" controls>
+              <video id="internal-video-tablet" controls   playsinline
+              webkit-playsinline>
                 <source src="{% static 'videos/sample.mp4' %}" type="video/mp4">
                 Your browser does not support the video tag.
               </video>

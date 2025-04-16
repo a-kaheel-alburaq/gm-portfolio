@@ -230,7 +230,6 @@ document.addEventListener("DOMContentLoaded", function () {
   setupVideoModal("play-video-mobile", "video-modal-mobile", "close-video-mobile", "internal-video-mobile"); // mobile
 });
 
-
 //Brief sectoin Counter Animation
 // Counter animation
 document.addEventListener('DOMContentLoaded', function () {

@@ -227,7 +227,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setupVideoModal("play-video", "video-modal", "close-video", "internal-video"); // desktop
   setupVideoModal("play-video-tablet", "video-modal-tablet", "close-video-tablet", "internal-video-tablet"); // tablet
-  setupVideoModal("play-video-mobile", "video-modal-mobile", "close-video-mobile", "internal-video-mobile"); // mobile
 });
 document.addEventListener('fullscreenchange', toggleFullscreenClass);
 document.addEventListener('webkitfullscreenchange', toggleFullscreenClass); // Safari

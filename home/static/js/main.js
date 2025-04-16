@@ -229,6 +229,22 @@ document.addEventListener("DOMContentLoaded", function () {
   setupVideoModal("play-video-tablet", "video-modal-tablet", "close-video-tablet", "internal-video-tablet"); // tablet
   setupVideoModal("play-video-mobile", "video-modal-mobile", "close-video-mobile", "internal-video-mobile"); // mobile
 });
+document.addEventListener('fullscreenchange', toggleFullscreenClass);
+document.addEventListener('webkitfullscreenchange', toggleFullscreenClass); // Safari
+document.addEventListener('mozfullscreenchange', toggleFullscreenClass);    // Firefox
+document.addEventListener('MSFullscreenChange', toggleFullscreenClass);     // IE/Edge
+
+function toggleFullscreenClass() {
+  const modal = document.querySelector('.video-modal');
+  if (!modal) return;
+
+  if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
+    modal.classList.add('fullscreen-mode');
+  } else {
+    modal.classList.remove('fullscreen-mode');
+  }
+}
+
 
 //Brief sectoin Counter Animation
 // Counter animation

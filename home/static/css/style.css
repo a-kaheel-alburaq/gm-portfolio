@@ -5880,6 +5880,13 @@ Tablet screens, where tablet usually is between 768px and 992px
     display: grid;
   }
 
+  .modal-content video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+
 
 }
 

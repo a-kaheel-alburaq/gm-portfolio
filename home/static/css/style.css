@@ -5844,6 +5844,10 @@ Tablet screens, where tablet usually is between 768px and 992px
     overflow: hidden;
   }
 
+  .video-modal.active {
+    display: grid;
+  }
+
 
 
 }

@@ -31,34 +31,7 @@
             </div>
           </div>
   
-          <script>
 
-        //video
-        document.addEventListener("DOMContentLoaded", function () {
-          function setupVideoModal(playId, modalId, closeId, videoId) {
-            const playBtn = document.getElementById(playId);
-            const modal = document.getElementById(modalId);
-            const closeBtn = document.getElementById(closeId);
-            const video = document.getElementById(videoId);
-
-            if (playBtn && modal && closeBtn && video) {
-              playBtn.addEventListener("click", function (e) {
-                e.preventDefault();
-                modal.style.display = "flex";
-                video.play();
-              });
-
-              closeBtn.addEventListener("click", function () {
-                video.pause();
-                video.currentTime = 0;
-                modal.style.display = "none";
-              });
-            }
-          }
-          setupVideoModal("play-video-mobile", "video-modal-mobile", "close-video-mobile", "internal-video-mobile"); // mobile
-
-          </script>
-                  
           <!-- Overlay Image -->
           <img src="{% static 'img/overlay-image.png' %}" class="img-fluid overlay-image position-absolute bottom-0 end-0" alt="Overlay Image">
         </div>
@@ -133,3 +106,6 @@
       </div>
     </section>
   </div>
+
+
+  

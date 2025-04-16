@@ -213,20 +213,22 @@ document.addEventListener("DOMContentLoaded", function () {
     if (playBtn && modal && closeBtn && video) {
       playBtn.addEventListener("click", function (e) {
         e.preventDefault();
-        modal.style.display = "flex";
+        modal.classList.add("active");   // Show the modal
         video.play();
       });
 
       closeBtn.addEventListener("click", function () {
         video.pause();
         video.currentTime = 0;
-        modal.style.display = "none";
+        modal.classList.remove("active"); // Hide the modal
       });
+
     }
   }
 
   setupVideoModal("play-video", "video-modal", "close-video", "internal-video"); // desktop
   setupVideoModal("play-video-tablet", "video-modal-tablet", "close-video-tablet", "internal-video-tablet"); // tablet
+  setupVideoModal("play-video-mobile", "video-modal-mobile", "close-video-mobile", "internal-video-mobile"); // mobile
 });
 document.addEventListener('fullscreenchange', toggleFullscreenClass);
 document.addEventListener('webkitfullscreenchange', toggleFullscreenClass); // Safari

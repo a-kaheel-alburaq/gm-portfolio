@@ -5847,10 +5847,42 @@ Tablet screens, where tablet usually is between 768px and 992px
   .video-modal.active {
     display: grid;
   }
+}
 
+/*about section for mobile*/
+@media (max-width: 767px) {
+  .mobile-view-about {
+    display: block;
+  }
+
+  .desktop-view {
+    display: none;
+  }
+
+  .tablet-view {
+    display: none;
+  }
+
+
+  .video-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .video-modal.active {
+    display: grid;
+  }
 
 
 }
+
 
 @media (min-width: 1030px) {
 

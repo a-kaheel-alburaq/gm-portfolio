@@ -204,25 +204,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //video
 document.addEventListener("DOMContentLoaded", function () {
-  const videoButton = document.getElementById("play-video");
-  const modal = document.getElementById("video-modal");
-  const closeButton = document.getElementById("close-video");
-  const video = document.getElementById("internal-video");
+  function setupVideoModal(playId, modalId, closeId, videoId) {
+    const playBtn = document.getElementById(playId);
+    const modal = document.getElementById(modalId);
+    const closeBtn = document.getElementById(closeId);
+    const video = document.getElementById(videoId);
 
-  // Open video modal
-  videoButton.addEventListener("click", function (e) {
-    e.preventDefault();  // Prevent any default action
-    modal.style.display = "flex"; // Show modal
-    video.play(); // Play the video
-  });
+    if (playBtn && modal && closeBtn && video) {
+      playBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        modal.style.display = "flex";
+        video.play();
+      });
 
-  // Close video modal
-  closeButton.addEventListener("click", function () {
-    video.pause(); // Pause video
-    video.currentTime = 0; // Reset video
-    modal.style.display = "none"; // Hide modal
-  });
+      closeBtn.addEventListener("click", function () {
+        video.pause();
+        video.currentTime = 0;
+        modal.style.display = "none";
+      });
+    }
+  }
+
+  setupVideoModal("play-video", "video-modal", "close-video", "internal-video"); // desktop
+  setupVideoModal("play-video-tablet", "video-modal-tablet", "close-video-tablet", "internal-video-tablet"); // tablet
+  setupVideoModal("play-video-mobile", "video-modal-mobile", "close-video-mobile", "internal-video-mobile"); // mobile
 });
+
 
 //Brief sectoin Counter Animation
 // Counter animation

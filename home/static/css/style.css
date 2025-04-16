@@ -2576,27 +2576,27 @@ section {
 
 .video-modal {
   display: none;
-  /* Hidden by default */
+  /* default hidden */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.7);
-  /* Dark background */
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-  /* Ensure it is on top of other content */
+  z-index: 9999;
+  /* Ensure it’s on top */
+  padding: 20px;
 }
-
 
 .modal-content {
   position: relative;
-  width: 80%;
-  max-width: 800px;
+  width: 100%;
+  max-width: 600px;
   background-color: white;
-  padding: 20px;
+  padding: 16px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -2619,8 +2619,6 @@ section {
   width: 100%;
   border-radius: 12px;
 }
-
-
 
 .modal-content video {
   width: 100%;
@@ -2858,7 +2856,7 @@ section {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #heroCarousel h1 {
     font-size: 28px;
     line-height: 36px;
@@ -3335,7 +3333,7 @@ section {
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .feature-box {
     flex-direction: column;
     /* Stack vertically on small screens */
@@ -5527,7 +5525,7 @@ html body main section {
 /*--------------------------------------------------------------
 branch cards
 --------------------------------------------------------------*/
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .row.branch-cards .col-3 {
     display: none;
   }
@@ -5545,7 +5543,7 @@ branch cards
 /*--------------------------------------------------------------
 jobs page
 --------------------------------------------------------------*/
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .search-container {
     display: flex;
     flex-direction: column;
@@ -5563,7 +5561,7 @@ jobs page
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .filters {
     width: 100%;
     margin-bottom: 20px;
@@ -5571,7 +5569,7 @@ jobs page
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .jobs-container {
     flex-direction: column;
   }
@@ -5586,7 +5584,7 @@ jobs page
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .cv-card {
     width: 100%;
     /* Stack cards on small screens */
@@ -5668,7 +5666,7 @@ Hero section
 /*--------------------------------------------------------------
 overlay image
 --------------------------------------------------------------*/
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .overlay-image2 {
     display: none;
   }
@@ -5781,9 +5779,19 @@ Tablet screens, where tablet usually is between 768px and 992px
     animation: zumpBottom 2s linear infinite;
   }
 
+  /* 
   .modal-content {
-    max-width: 90%;
-  }
+    width: 95%;
+    padding: 12px;
+  } */
+  /* 
+  .modal-content video {
+    width: 90%;
+    height: auto;
+    border-radius: 8px;
+    z-index: 1000;
+    overflow: hidden;
+  } */
 
   .overlay-image-tablet {
     width: 70px;
@@ -5799,6 +5807,17 @@ Tablet screens, where tablet usually is between 768px and 992px
   .video-button img {
     width: 50px;
     height: 50px;
+  }
+
+  .video-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
   }
 
 }
@@ -5911,34 +5930,6 @@ Tablet screens, where tablet usually is between 768px and 992px
 
 .right-overlay {
   position: relative;
-}
-
-/* Video Modal */
-.video-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 1050;
-  padding: 1rem;
-}
-
-.modal-content {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.modal-content video {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
 }
 
 .close-btn {

@@ -213,14 +213,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (playBtn && modal && closeBtn && video) {
       playBtn.addEventListener("click", function (e) {
         e.preventDefault();
-        modal.classList.add("active");   // Show the modal
+        modal.style.display = "grid";
         video.play();
       });
 
       closeBtn.addEventListener("click", function () {
         video.pause();
         video.currentTime = 0;
-        modal.classList.remove("active"); // Hide the modal
+        modal.style.display = "none";
       });
 
     }

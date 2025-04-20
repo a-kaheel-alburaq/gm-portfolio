@@ -112,7 +112,7 @@ input[type="date"]:valid+.date-placeholder {
   /* Adjust width */
   height: 630px;
   /* Enforce height */
-  overflow: hidden;
+  /* overflow: hidden; */
   /* Prevent content overflow */
   display: flex;
   justify-content: center;
@@ -211,7 +211,7 @@ input[type="date"]:valid+.date-placeholder {
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 /* Modal Close Button */
@@ -1512,7 +1512,7 @@ div .row.inner-filter {
   background: #fcfcfc;
   border-bottom: 2px solid #fdb417;
   /* margin: 72px 0 -72px 0; */
-  overflow: hidden;
+  /* overflow: hidden; */
   /* Ensures the video doesn’t overflow out of the section */
   z-index: 1;
 }
@@ -1630,7 +1630,7 @@ section {
   /* Dynamic gradient */
   z-index: 1000;
   border-radius: 3px;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: opacity 0.3s ease, background 0.1s linear;
   /* Smooth opacity and color changes */
   opacity: 0;
@@ -1819,7 +1819,7 @@ section {
   justify-content: center;
   margin-right: 15px;
   transition: transform 0.3s ease;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 
@@ -1858,7 +1858,7 @@ section {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #why-choose-us .image-frame img {
@@ -1962,7 +1962,7 @@ section {
   border-radius: 50%;
   background-color: transparent;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin: 0 auto;
   transition: background-color 0.5s ease;
 }
@@ -2085,7 +2085,7 @@ section {
   border-radius: 50%;
   /* Circle shape */
   cursor: default;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -2315,7 +2315,7 @@ section {
   border: 2px solid #fdb417;
   border-radius: 8px;
   cursor: pointer;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: all 0.3s ease;
 }
 
@@ -2329,7 +2329,7 @@ section {
   border: 2px solid #fdb417;
   border-radius: 8px;
   cursor: pointer;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: all 0.3s ease;
 }
 
@@ -2367,7 +2367,7 @@ section {
   border-radius: 50%;
   /* Makes the button circular */
   cursor: pointer;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2403,7 +2403,7 @@ section {
   border-radius: 50%;
   /* Makes the button circular */
   cursor: pointer;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2452,6 +2452,7 @@ section {
   padding: 0;
   /* margin-left: -10vw; */
   margin-right: -10vw;
+  /* overflow: hidden; */
 }
 
 .image-border {
@@ -2608,7 +2609,7 @@ section {
 
 .video-modal.fullscreen-mode .modal-content {
   position: static !important;
-  overflow: visible !important;
+  /* overflow: visible !important; */
   padding: 0 !important;
   background: black;
 }
@@ -2620,7 +2621,7 @@ section {
   background-color: white;
   padding: 16px;
   border-radius: 12px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /*tablet about us section*/
@@ -2702,7 +2703,7 @@ section {
 #heroCarousel {
   height: 100vh;
   /* Full viewport height */
-  overflow: hidden;
+  /* overflow: hidden; */
   /* Prevent resizing issues */
 }
 
@@ -2754,7 +2755,7 @@ section {
 .carousel-item {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 
@@ -2807,7 +2808,7 @@ section {
   background: #000;
   /* border-bottom: 2px solid #fdb417; */
   /* margin: 72px 0 -72px 0; */
-  overflow: hidden;
+  /* overflow: hidden; */
   /* Ensures the video doesn’t overflow out of the section */
   z-index: 1;
 }
@@ -2996,7 +2997,7 @@ section {
   margin-top: 0;
   background: #f8f9fa;
   border-radius: 8px;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: sticky;
   top: 200px;
   max-height: calc(100vh - 100px);
@@ -3292,7 +3293,7 @@ section {
   padding: 60px 0;
   background-color: #ffffff;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #why-goldenmeat .section-title {
@@ -3392,7 +3393,7 @@ section {
   border-radius: 15px;
   /* Rounded corners */
   border: 1px solid #ddd;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* Prevent content overflow during animation */
   transition: box-shadow 0.3s ease;
   /* Subtle hover effect */
@@ -3466,7 +3467,7 @@ section {
 .card-details {
   max-height: 0;
   /* Start closed */
-  overflow: hidden;
+  /* overflow: hidden; */
   /* Hide overflowing content */
   padding: 0 15px;
   /* Padding adjusts dynamically */
@@ -3664,7 +3665,7 @@ section {
 .news-card {
   border: 1px solid #ddd;
   border-radius: 10px;
-  overflow: hidden;
+  /* overflow: hidden; */
   background: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -3727,7 +3728,7 @@ section {
 
 .photo-card {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -4073,7 +4074,7 @@ section {
   position: relative;
   height: 50vh;
   /* 50% of the viewport height */
-  overflow: hidden;
+  /* overflow: hidden; */
   /* Prevent overflow */
 }
 
@@ -4098,7 +4099,7 @@ section {
   width: 100%;
   height: 100%;
   /* Ensure it spans the entire section */
-  overflow: hidden;
+  /* overflow: hidden; */
   /* Clip overflowing parts of the image */
   z-index: -1;
   /* Ensure it stays behind other content */
@@ -4568,7 +4569,7 @@ h6,
 
 .mobile-nav .drop-down ul {
   display: none;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .mobile-nav .drop-down li {
@@ -4602,13 +4603,13 @@ h6,
   left: 0;
   position: fixed;
   background: rgba(78, 64, 57, 0.9);
-  overflow: hidden;
+  /* overflow: hidden; */
   display: none;
 }
 
-.mobile-nav-active {
+/* .mobile-nav-active {
   overflow: hidden;
-}
+} */
 
 .mobile-nav-active .mobile-nav {
   left: 0;
@@ -4759,7 +4760,7 @@ section {
 .services .icon-box {
   padding: 30px;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin: 0 0 40px 0;
   background: #fff;
   box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
@@ -4880,7 +4881,7 @@ html body main section {
 .portfolio .portfolio-wrap {
   transition: 0.3s;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-radius: 8px;
   z-index: 1;
 }
@@ -5057,7 +5058,7 @@ html body main section {
   margin-bottom: 20px;
   background: #343a40;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .team .member .member-info {
@@ -5760,9 +5761,10 @@ overlay image
 /*--------------------------------------------------------------
 Tablet screens, where tablet usually is between 768px and 992px 
 --------------------------------------------------------------*/
+@media (min-width: 768px) {}
 
 /*about section for tablet*/
-@media (max-width: 1030px) and (min-width: 768px) {
+@media (max-width: 1030px) {
   .desktop-view {
     display: none;
   }
@@ -5841,11 +5843,22 @@ Tablet screens, where tablet usually is between 768px and 992px
     align-items: center;
     z-index: 9999;
     padding: 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .video-modal.active {
     display: grid;
+  }
+}
+
+@media (min-width: 1030px) {
+
+  .mobile-view-about {
+    display: none;
+  }
+
+  .tablet-view {
+    display: none;
   }
 }
 
@@ -5873,7 +5886,7 @@ Tablet screens, where tablet usually is between 768px and 992px
     align-items: center;
     z-index: 9999;
     padding: 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .video-modal.active {
@@ -5891,16 +5904,6 @@ Tablet screens, where tablet usually is between 768px and 992px
 }
 
 
-@media (min-width: 1030px) {
-
-  .mobile-view-about {
-    display: none;
-  }
-
-  .tablet-view {
-    display: none;
-  }
-}
 
 /*about section for mobile */
 

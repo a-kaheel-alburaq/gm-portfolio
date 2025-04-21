@@ -2512,13 +2512,12 @@ section {
   .video-button {
     font-family: 'Arial', sans-serif;
     bottom: 0;
-    left: 140px;
-    position: absolute;
+    left: 249px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background-color: var(--boskery-base, #fdb417);
     color: #fff;
     font-size: 24px;
@@ -2533,6 +2532,7 @@ section {
     border: none;
     /* Add this line for a black border */
   }
+
 
 }
 
@@ -5919,13 +5919,13 @@ Tablet screens, where tablet usually is between 768px and 992px
 
   .image-border {
     bottom: -30px;
-    left: 0%;
-    width: calc(83% + -43%);
-    height: calc(100% - 40px);
+    left: 15%;
+    width: calc(99% + -43%);
+    height: calc(114% - 40px);
     border: 3px solid #fdb417;
     animation: zumpBottom 2s linear infinite;
     z-index: 1;
-    padding-right: 39%;
+    /* padding-right: 39%; */
   }
 
   .main-image {
@@ -5939,7 +5939,7 @@ Tablet screens, where tablet usually is between 768px and 992px
     z-index: 3;
     border-radius: 50%;
     bottom: 0;
-    left: 165px;
+    left: 210px;
     position: absolute;
     animation: zumpBottom 2s linear infinite;
   }

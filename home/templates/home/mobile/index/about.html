@@ -17,21 +17,21 @@
 <div class="mobile-view-about">
   
 
-<section id="custom-section" class=" align-items-center  " >
+<section id="custom-section" class=" d-flex justify-content-center py-5" >
     <div class="container">
-      <div class="row align-items-center" style= "">
+      <div class="row justify-content-center" style= "">
         <div class="d-flex justify-content-center">
-          <div class="col-lg-5 position-relative left-side">
+          <div class="col-lg-5 position-relative d-flex flex-column align-items-center">
         <!-- Left Side (Image with Border, Video Button, and Overlay Image) -->
-        <div class="col-lg-5 position-relative left-side">
+        <div class="col-lg-5 position-relative d-flex flex-column align-items-center ">
           <!-- Border Behind Image -->
           <div class="image-border"></div>
           <!-- Main Image -->
-          <img src="{% static 'img/mobile/main-image.png' %}" class="img-fluid main-image " alt="Main Image">
+          <img src="{% static 'img/mobile/main-image.png' %}" class="img-fluid main-image " style="max-width: 60%; height: auto;" alt="Main Image">
           
           <!-- Video Button -->
-          <button id="play-video-mobile" class="video-button position-absolute top-0 end-0">
-            <img src="{% static 'img/icons/play.svg' %}" alt="Play Video" class="img-fluid" style="width: 40px; height: 40px;">
+          <button id="play-video-mobile" class="video-button position-absolute top-0 end-0" >
+            <img src="{% static 'img/icons/play.svg' %}" alt="Play Video" class="img-fluid" >
           </button>
 
           <!-- Overlay Image -->

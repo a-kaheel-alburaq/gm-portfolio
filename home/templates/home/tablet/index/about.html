@@ -1,5 +1,15 @@
 {% load static %}
+<div id="video-modal-tablet" class="video-modal">
+  <div class="modal-content">
+    <button id="close-video-tablet" class="close-btn">X</button>
+      <video
+      id="internal-video-tablet"
+      width="100%" controls>
+      <source src="{% static 'videos/sample.mp4' %}" type="video/mp4">
+    </video>
 
+  </div>
+</div>
 <div class="tablet-view">
 <section id="custom-section" class=" align-items-center py-5 " >
     <div class="container">
@@ -18,17 +28,7 @@
           <img src="{% static 'img/overlay-image.png' %}" class="overlay-image-tablet right-overlay" alt="Overlay Image">
         
           <!-- Video Modal -->
-          <div id="video-modal-tablet" class="video-modal">
-            <div class="modal-content">
-              <button id="close-video-tablet" class="close-btn">X</button>
-                <video
-                id="internal-video-tablet"
-                width="100%" controls>
-                <source src="{% static 'videos/sample.mp4' %}" type="video/mp4">
-              </video>
-
-            </div>
-          </div>
+          
         </div>
         
   

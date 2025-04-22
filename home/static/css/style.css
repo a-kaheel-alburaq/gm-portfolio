@@ -1853,6 +1853,30 @@ section {
   color: #777;
 }
 
+/* tablet why choose us */
+@media (max-width: 992px) {
+  #why-choose-us .client-item .content h4 {
+    text-align: left;
+  }
+
+  #why-choose-us .client-item .icon-frame {
+    margin-left: 50px;
+  }
+}
+
+/* mobile why choose us */
+@media (max-width: 768px) {
+  #why-choose-us .client-item .content h4 {
+    text-align: center;
+  }
+
+  #why-choose-us .client-item .icon-frame {
+    margin-right: 15px;
+    margin-left: 0px;
+  }
+}
+
+
 /* Image Frame Styling for Why Choose Us Section */
 #why-choose-us .image-frame {
   width: 120px;
@@ -3708,6 +3732,14 @@ section {
 
 .news-content .read-more:hover {
   color: #fdb417;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .center-on-tablet {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
 }
 
 
@@ -5686,7 +5718,7 @@ Hero section
 /*--------------------------------------------------------------
 overlay image
 --------------------------------------------------------------*/
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .overlay-image2 {
     display: none;
   }
@@ -6048,6 +6080,14 @@ Tablet screens, where tablet usually is between 768px and 992px
 /*---------------------------------------------------------------------
 Mobile navbar adjustment
 ---------------------------------------------------------------------*/
+@media (max-width: 1244px) {
+  #header .logo img {
+    max-width: 100%;
+    max-height: auto;
+    /* left: 16%; */
+    padding-left: 10%;
+  }
+}
 
 @media (max-width: 767px) {
   #header .logo img {

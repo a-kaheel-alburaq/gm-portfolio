@@ -2880,6 +2880,27 @@ section {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
+/* Default: show desktop carousel, hide mobile */
+.desktop-bg {
+  display: block;
+}
+
+.mobile-bg {
+  display: none !important;
+}
+
+/* Phone view: show mobile, hide desktop */
+@media (max-width: 767px) {
+  .desktop-bg {
+    display: none !important;
+  }
+
+  .mobile-bg {
+    display: block !important;
+  }
+}
+
+
 @media (min-width: 1024px) {
   #heroCarousel {
     background-attachment: fixed;
@@ -4352,7 +4373,7 @@ h6,
   z-index: 997;
   padding: 15px 0;
   background: #ffffff00;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
   position: fixed;
   /* Make sure header is the reference for absolute positioning */
 }

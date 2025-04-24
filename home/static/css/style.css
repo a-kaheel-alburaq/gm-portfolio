@@ -112,7 +112,7 @@ input[type="date"]:valid+.date-placeholder {
   /* Adjust width */
   height: 630px;
   /* Enforce height */
-  /* overflow: hidden; */
+  overflow: hidden;
   /* Prevent content overflow */
   display: flex;
   justify-content: center;
@@ -2949,6 +2949,14 @@ section {
 }
 
 /* --------------------------------------------- */
+
+
+#hero {
+  margin-top: 0 !important;
+  padding-top: 0 !important
+}
+
+
 /* 
 #hero #heroCarousel {
   position: relative;
@@ -4343,7 +4351,7 @@ h6,
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
-  background: #fff;
+  background: #ffffff00;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   position: fixed;
   /* Make sure header is the reference for absolute positioning */
@@ -4445,7 +4453,7 @@ h6,
   opacity: 0;
   visibility: hidden;
   padding: 10px 0;
-  background: #fff;
+  background: #ffffff00;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: ease all 0.3s;
 }

@@ -6139,3 +6139,50 @@ Mobile navbar adjustment
     justify-content: space-between;
   }
 }
+
+
+
+/*---------------------------------------------------------------------
+Mobile news cards
+---------------------------------------------------------------------*/
+@media (max-width: 767px) {
+  .news-section .news-card h3 {
+    font-size: 8px;
+    /* smaller heading */
+  }
+
+  .news-section .news-card p {
+    font-size: 6px;
+    /* smaller paragraph */
+  }
+
+  .news-section .news-card {
+    padding: 2px;
+    /* reduce card internal padding */
+  }
+
+  .news-section .news-card img {
+    margin-bottom: 5px;
+    /* optional: reduce image spacing */
+  }
+
+  .news-section .col-4 {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .news-section .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .news-section .news-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
+
+}

@@ -142,6 +142,9 @@ input[type="date"]:valid+.date-placeholder {
   border-radius: 15px;
   max-width: 340px;
   border: 3px solid #ddad52;
+  width: 340px;
+  height: 630px;
+  overflow: hidden;
 }
 
 .social-container iframe,
@@ -153,6 +156,43 @@ input[type="date"]:valid+.date-placeholder {
   border: 3px solid #ddad52;
 
   /* Prevents elements from becoming too wide */
+}
+
+social-container-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  social-container {
+    display: none;
+  }
+
+  social-container-mobile {
+    display: block;
+  }
+
+
+  .instagram-container {
+    width: 340px;
+    /* Adjust width */
+    height: 400px;
+    /* Enforce height */
+    overflow: hidden;
+    /* Prevent content overflow */
+    display: flex;
+    justify-content: center;
+    /* Center content */
+    align-items: center;
+  }
+
+  .social-container .facebook-frame {
+    border-radius: 15px;
+    max-width: 340px;
+    border: 3px solid #ddad52;
+    width: 340px;
+    height: 400px;
+    overflow: hidden;
+  }
 }
 
 /*--------------------------------------------------------------

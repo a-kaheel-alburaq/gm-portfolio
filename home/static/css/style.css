@@ -3492,7 +3492,7 @@ section {
   border-radius: 15px;
   /* Rounded corners */
   border: 1px solid #ddd;
-  /* overflow: hidden; */
+  overflow: hidden;
   /* Prevent content overflow during animation */
   transition: box-shadow 0.3s ease;
   /* Subtle hover effect */
@@ -3566,7 +3566,7 @@ section {
 .card-details {
   max-height: 0;
   /* Start closed */
-  /* overflow: hidden; */
+  overflow: hidden;
   /* Hide overflowing content */
   padding: 0 15px;
   /* Padding adjusts dynamically */
@@ -5652,7 +5652,15 @@ html body main section {
 /*--------------------------------------------------------------
 branch cards
 --------------------------------------------------------------*/
+.row.branch-cards.mobile-only {
+  display: none;
+}
+
 @media (max-width: 767px) {
+  .row.branch-cards.mobile-only {
+    display: block;
+  }
+
   .row.branch-cards .col-3 {
     display: none;
   }

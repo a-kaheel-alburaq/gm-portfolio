@@ -144,53 +144,66 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-3 vertical-filter">
             <ul id="vertical-filter">
-              <li class="filter-active"><a href="#">All</a></li>
-              <li><a href="#">Frozen</a></li>
-              <li><a href="#">Large </a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
-              <li><a href="#">Meduim</a></li>
+              <div class="filters">
+                <div class="filter-group">
+                  <button class="filter-toggle" style="text-align: center;">
+                    All 
+                  </button>
+                </div>
+                <!-- Job Location Filter -->
+                <div class="filter-group">
+                  <button class="filter-toggle">
+                    Job Location 
+                    <i class="fas fa-chevron-down toggle-arrow"></i>
+                  </button>
+                  <div class="filter-options">
+                    <input type="checkbox" id="location1"><label for="location1">Riyadh</label><br>
+                    <input type="checkbox" id="location2"><label for="location2">Khobar</label><br>
+                    <input type="checkbox" id="location3"><label for="location3">Jeddah</label><br>
+                  </div>
+                </div>
+              
+                <!-- Job Role Filter -->
+                <div class="filter-group">
+                  <button class="filter-toggle">
+                    Job Role 
+                    <i class="fas fa-chevron-down toggle-arrow"></i>
+                  </button>
+                  <div class="filter-options">
+                    <input type="checkbox" id="role1"><label for="role1">Developer</label><br>
+                    <input type="checkbox" id="role2"><label for="role2">Designer</label><br>
+                    <input type="checkbox" id="role3"><label for="role3">Project Manager</label><br>
+                  </div>
+                </div>
+              
+                <!-- Industry Filter -->
+                <div class="filter-group">
+                  <button class="filter-toggle">
+                    Industry 
+                    <i class="fas fa-chevron-down toggle-arrow"></i>
+                  </button>
+                  <div class="filter-options">
+                    <input type="checkbox" id="industry1"><label for="industry1">IT</label><br>
+                    <input type="checkbox" id="industry2"><label for="industry2">Finance</label><br>
+                    <input type="checkbox" id="industry3"><label for="industry3">Marketing</label><br>
+                  </div>
+                </div>
+              
+                <!-- Employment Status Filter -->
+                <div class="filter-group">
+                  <button class="filter-toggle">
+                    Employment Status 
+                    <i class="fas fa-chevron-down toggle-arrow"></i>
+                  </button>
+                  <div class="filter-options">
+                    <input type="checkbox" id="status1"><label for="status1">Full-Time</label><br>
+                    <input type="checkbox" id="status2"><label for="status2">Part-Time</label><br>
+                    <input type="checkbox" id="status3"><label for="status3">Remotly</label><br>
+                  </div>
+                </div>
+                
+              </div>
+              
 
               
             </ul>
@@ -325,5 +338,17 @@
     </section>
     <!-- End Portfolio Section -->
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterToggles = document.querySelectorAll('.filter-toggle');
+
+    filterToggles.forEach(toggle => {
+      toggle.addEventListener('click', function() {
+        const filterGroup = this.closest('.filter-group');
+        filterGroup.classList.toggle('open');
+      });
+    });
+  });
+</script>
 
 {% endblock %}

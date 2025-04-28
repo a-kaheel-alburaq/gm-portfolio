@@ -6148,16 +6148,18 @@ Mobile news cards
 @media (max-width: 767px) {
   .news-section .news-card h3 {
     font-size: 8px;
+    padding: 0%;
     /* smaller heading */
   }
 
   .news-section .news-card p {
     font-size: 6px;
+    padding: 0%;
     /* smaller paragraph */
   }
 
   .news-section .news-card {
-    padding: 2px;
+    padding: 0px;
     /* reduce card internal padding */
   }
 
@@ -6183,6 +6185,10 @@ Mobile news cards
     object-fit: cover;
     border-radius: 8px;
     display: block;
+  }
+
+  .news-content {
+    padding: 5px;
   }
 
 }

@@ -6191,18 +6191,19 @@ Mobile navbar adjustment
     justify-content: space-between;
   }
 
-  /* shrink logo size when scrolling in phone screen */
+  /* shrink logo size when scrolling down in phone screen */
   @media (max-width: 767px) {
-    #mobile-logo {
-      transition: all 0.3s ease-in-out;
-      height: 70px;
+    html body header#header.fixed-top div.container-fluid.d-flex div.logo.mr-auto a img#mobile-logo.img-fluid {
+      transition: height 2.3s ease, width 2.3s ease;
+      height: 170px;
     }
 
-    #mobile-logo.shrink {
-      height: 40px;
+    html body header#header.fixed-top div.container-fluid.d-flex div.logo.mr-auto a img#mobile-logo.img-fluid.shrink {
+      height: 60px;
     }
   }
 }
+
 
 
 

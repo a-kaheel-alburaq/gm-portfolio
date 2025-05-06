@@ -6194,18 +6194,14 @@ Mobile navbar adjustment
   /* shrink logo size when scrolling in phone screen */
   @media (max-width: 767px) {
     #mobile-logo {
-      height: 60px;
-      transition: height 0.3s ease;
-      left: 16%;
-      position: relative;
-      padding-left: 10%;
+      transition: all 0.3s ease-in-out;
+      height: 70px;
     }
 
     #mobile-logo.shrink {
-      height: 10px;
+      height: 40px;
     }
   }
-
 }
 
 

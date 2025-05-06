@@ -6168,7 +6168,7 @@ Mobile navbar adjustment
   #header .logo img {
     max-width: 100%;
     max-height: auto;
-    /* left: 16%; */
+    left: 16%;
     padding-left: 10%;
   }
 }
@@ -6177,8 +6177,6 @@ Mobile navbar adjustment
   #header .logo img {
     max-width: 100%;
     max-height: auto;
-    left: 16%;
-    padding-left: 10%;
   }
 
 
@@ -6192,6 +6190,22 @@ Mobile navbar adjustment
     align-items: center;
     justify-content: space-between;
   }
+
+  /* shrink logo size when scrolling in phone screen */
+  @media (max-width: 767px) {
+    #mobile-logo {
+      height: 60px;
+      transition: height 0.3s ease;
+      left: 16%;
+      position: relative;
+      padding-left: 10%;
+    }
+
+    #mobile-logo.shrink {
+      height: 10px;
+    }
+  }
+
 }
 
 

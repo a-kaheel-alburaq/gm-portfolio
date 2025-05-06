@@ -60,7 +60,7 @@
         <div class="container-fluid d-flex ">
 
             <div class="logo mr-auto">
-                <a href=""><img src="{% static '/img/logo.png' %}" alt="" class="img-fluid" ></a>
+                <a href=""><img src="{% static '/img/logo.png' %}" alt="" class="img-fluid" id="mobile-logo"></a>
             </div>
 
             <nav class="nav-menu d-none d-lg-block">
@@ -217,6 +217,29 @@
     <!-- Template Main JS File -->
     <script src="{% static '/js/main.js' %}"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const logo = document.getElementById('mobile-logo');
+          console.log(logo);  // Logs the logo element for debugging
+      
+          function isMobile() {
+            return window.innerWidth <= 767;
+          }
+      
+          window.addEventListener('scroll', function () {
+            if (isMobile()) {
+              if (window.scrollY > 20) {
+                logo.classList.add('shrink');
+              } else {
+                logo.classList.remove('shrink');
+              }
+            }
+          });
+        });
+      </script>
+      
+
+      
     
 </body>
 

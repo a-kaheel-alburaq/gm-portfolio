@@ -5871,6 +5871,11 @@ overlay image
   }
 }
 
+
+.mobile-carousel-circles {
+  display: none !important;
+}
+
 @media (max-width: 768px) {
   .desktop-view-circles {
     display: none !important;

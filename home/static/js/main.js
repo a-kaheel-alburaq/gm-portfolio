@@ -284,6 +284,11 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.stats-box').forEach((box) => {
     observer.observe(box);
   });
+
+  // Observe each stats-box
+  document.querySelectorAll('.stats-box-mobile').forEach((box) => {
+    observer.observe(box);
+  });
 });
 
 $(document).ready(function () {

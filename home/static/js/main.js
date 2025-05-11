@@ -365,4 +365,28 @@ $(document).ready(function () {
     autoplayHoverPause: true  // Pause autoplay on hover
   });
 });
-console.log("hello")
+
+
+//News carousel:
+$(document).ready(function () {
+  $(".news-carousel").owlCarousel({
+    loop: true,
+    margin: 15,
+    nav: false,
+    dots: true,
+    items: 1,
+    autoplay: false,
+    autoplayTimeout: 3000,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      992: {
+        items: 3
+      }
+    }
+  });
+});

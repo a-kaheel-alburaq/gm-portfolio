@@ -5871,6 +5871,104 @@ overlay image
   }
 }
 
+@media (max-width: 768px) {
+  .desktop-view-circles {
+    display: none !important;
+  }
+
+  .mobile-carousel-circles {
+    display: block !important;
+  }
+
+  /* For each circle */
+  .stats-box-mobile {
+    position: relative;
+    width: 300px;
+    /* Same size for all circles */
+    height: 300px;
+    /* Same size for all circles */
+    font-size: 1.4rem;
+    /* Adjust font size */
+    font-weight: 600;
+    color: #fdb417;
+    background: none;
+    border: 2px solid #fdb417;
+    border-radius: 50%;
+    /* Circle shape */
+    cursor: default;
+    /* overflow: hidden; */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    flex-wrap: wrap;
+    overflow: hidden;
+    /* Ensure it's above the other circles */
+  }
+
+  /* Hover effect for the circle */
+  .stats-box-mobile:hover {
+    color: white;
+  }
+
+  .stats-box-mobile:hover p,
+  .stats-box-mobile:hover span {
+    color: white;
+  }
+
+  /* Button style liquid effect */
+  .btn-border-reveal::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: #fdb417;
+    transition: height 0.3s ease;
+    z-index: -1;
+  }
+
+  .stats-box-mobile:hover::after {
+    height: 100%;
+  }
+
+  /* Change text style */
+  .stats-box-mobile span {
+    font-size: 3.0rem;
+    font-weight: bold;
+    margin-right: 0.0rem;
+  }
+
+  .stats-box-mobile p::before {
+    content: '';
+    display: block;
+    height: 1rem;
+    /* Adjust to create desired space */
+  }
+
+  /* .span-margin {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-right: 10%;
+} */
+
+  .stats-box-mobile p {
+    margin-top: -3.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 0;
+    color: inherit;
+    display: block;
+  }
+
+  .stats-item {
+    display: flex;
+    justify-content: center;
+  }
+
+}
 
 
 /*--------------------------------------------------------------

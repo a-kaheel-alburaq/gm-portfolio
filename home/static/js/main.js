@@ -390,3 +390,16 @@ $(document).ready(function () {
     }
   });
 });
+
+$(document).ready(function () {
+  $(".stats-carousel").owlCarousel({
+    items: 1,
+    center: true,
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    autoplay: false,
+    autoplayTimeout: 4000
+  });
+});

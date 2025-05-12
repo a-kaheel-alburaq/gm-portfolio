@@ -487,34 +487,39 @@ width: 100;
     href="https://twitter.com/goldenmeatksa">Tweets by Golden meat</a> 
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> {% endcomment %}
 
-
   <!-- TikTok -->
-<div style="width: 340px; height: 630px;">
-  <!-- Replace the following line with your actual embed code from the widget provider -->
-  <iframe src="goldenmeatsa" width="340" height="630" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowfullscreen></iframe>
-</div>
+  <div class="social-frame">
+    <blockquote class="tiktok-embed"
+                cite="https://www.tiktok.com/@goldenmeatsa/video/7464165196328717576?autoplay=1"
+                data-video-id="7464165196328717576"
+                style="max-width: 100%; height: 630px;"
+                allow="autoplay; encrypted-media" >
+      <section></section>
+    </blockquote>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+  </div>
 
   <!-- Facebook -->
-  <div class="facebook-frame">
-    <iframe 
-        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGoldenmeatsa1&tabs=timeline&width=340&height=630&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" 
-        width="340" height="630" style="border:none; overflow:hidden;"
-        scrolling="no" frameborder="0" allowfullscreen="true" 
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+  <div class="social-frame">
+    <iframe
+      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGoldenmeatsa1&tabs=timeline&width=340&height=630"
+      width="340" height="630" style="border:none; overflow:hidden;"
+      scrolling="no" frameborder="0" allowfullscreen="true"
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
     </iframe>
-</div>
-
+  </div>
 
   <!-- Instagram -->
-  <div class="instagram-container">
-    <blockquote class="instagram-media" 
-                data-instgrm-permalink="https://www.instagram.com/p/DIOEPF6NPIu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" 
-                data-instgrm-version="14">
-    </blockquote>         
+  <div class="social-frame">
+    <blockquote class="instagram-media"
+      data-instgrm-permalink="https://www.instagram.com/p/DIOEPF6NPIu/"
+      data-instgrm-version="14" style="width: 340px; height: 630px;">
+    </blockquote>
     <script async src="https://www.instagram.com/embed.js"></script>
   </div>
 </section>
 
+{% include 'home/mobile/index/social-container.html' %}
 
 <!-- Why Choose Us Section -->
 <section id="why-choose-us" class="why-choose-us section-bg">

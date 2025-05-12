@@ -25,7 +25,8 @@
                 <div class="col-lg-9">
                   <ul id="portfolio-flters1" >
                     <span class="icon-span">
-                      <a href="{% url 'meats' %}" >
+                      {% comment %} <a href="{% url 'meats' %}" > {% endcomment %}
+                        <a href="#" >
                         <li >
                           <div class="icon-container">
                             <img src="{% static 'img/icons/all.svg' %}" class="filter-icon" alt="All Icon" />
@@ -49,7 +50,8 @@
                     </span>
 
                     <span class="icon-span">
-                      <a href="{% url 'dairy' %}" >
+                      {% comment %} <a href="{% url 'dairy' %}" > {% endcomment %}
+                        <a href="#" >
                         <li >
                           <div class="icon-container">
                             <img src="{% static 'img/icons/Dairy.svg' %}" class="filter-icon" alt="All Icon" />
@@ -60,7 +62,8 @@
                     </span>
 
                     <span class="icon-span">
-                      <a href="{% url 'oils' %}">
+                      {% comment %} <a href="{% url 'oils' %}"> {% endcomment %}
+                        <a href="#" >
                         <li >
                           <div class="icon-container">
                             <img src="{% static 'img/icons/oils2.svg' %}" class="filter-icon" alt="All Icon" />
@@ -71,7 +74,8 @@
                     </span>
           
                     <span class="icon-span">
-                      <a href="{% url 'others' %}">
+                      {% comment %} <a href="{% url 'others' %}"> {% endcomment %}
+                        <a href="#" >
                         <li >
                           <div class="icon-container">
                             <img src="{% static 'img/icons/others.svg' %}" class="filter-icon" alt="All Icon" />
@@ -94,13 +98,13 @@
         <div class="row inner-filter" >
           <div >
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">
+              <li data-filter="*" >
                 <div class="icon-container">
                   <img src="{% static 'img/icons/all.svg' %}" class="filter-icon" alt="All Icon" />
                 </div>
                 <p>All</p>
               </li>
-              <li data-filter=".filter-beef">
+              <li data-filter=".filter-beef" class="filter-active">
                 <div class="icon-container">
                   <img src="{% static 'img/icons/beef-meat.svg' %}" class="filter-icon" alt="Beef Meat Icon" />
                 </div>
@@ -153,54 +157,15 @@
                 <!-- Job Location Filter -->
                 <div class="filter-group">
                   <button class="filter-toggle">
-                    Job Location 
+                    Animal Type
                     <i class="fas fa-chevron-down toggle-arrow"></i>
                   </button>
                   <div class="filter-options">
-                    <input type="checkbox" id="location1"><label for="location1">Riyadh</label><br>
-                    <input type="checkbox" id="location2"><label for="location2">Khobar</label><br>
-                    <input type="checkbox" id="location3"><label for="location3">Jeddah</label><br>
+                    <input type="checkbox" id="location1" checked><label for="location1">BEEF</label><br>
                   </div>
                 </div>
               
-                <!-- Job Role Filter -->
-                <div class="filter-group">
-                  <button class="filter-toggle">
-                    Job Role 
-                    <i class="fas fa-chevron-down toggle-arrow"></i>
-                  </button>
-                  <div class="filter-options">
-                    <input type="checkbox" id="role1"><label for="role1">Developer</label><br>
-                    <input type="checkbox" id="role2"><label for="role2">Designer</label><br>
-                    <input type="checkbox" id="role3"><label for="role3">Project Manager</label><br>
-                  </div>
-                </div>
-              
-                <!-- Industry Filter -->
-                <div class="filter-group">
-                  <button class="filter-toggle">
-                    Industry 
-                    <i class="fas fa-chevron-down toggle-arrow"></i>
-                  </button>
-                  <div class="filter-options">
-                    <input type="checkbox" id="industry1"><label for="industry1">IT</label><br>
-                    <input type="checkbox" id="industry2"><label for="industry2">Finance</label><br>
-                    <input type="checkbox" id="industry3"><label for="industry3">Marketing</label><br>
-                  </div>
-                </div>
-              
-                <!-- Employment Status Filter -->
-                <div class="filter-group">
-                  <button class="filter-toggle">
-                    Employment Status 
-                    <i class="fas fa-chevron-down toggle-arrow"></i>
-                  </button>
-                  <div class="filter-options">
-                    <input type="checkbox" id="status1"><label for="status1">Full-Time</label><br>
-                    <input type="checkbox" id="status2"><label for="status2">Part-Time</label><br>
-                    <input type="checkbox" id="status3"><label for="status3">Remotly</label><br>
-                  </div>
-                </div>
+                
                 
               </div>
               

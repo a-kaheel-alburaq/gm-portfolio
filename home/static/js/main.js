@@ -381,7 +381,7 @@ $(document).ready(function () {
     dots: true,
     items: 1,
     autoplay: false,
-    autoplayTimeout: 3000,
+    autoplayTimeout: 1000,
     responsive: {
       0: {
         items: 1
@@ -404,7 +404,7 @@ $(document).ready(function () {
     margin: 10,
     nav: false,
     dots: true,
-    autoplay: false,
-    autoplayTimeout: 4000
+    autoplay: true,
+    autoplayTimeout: 1000
   });
 });

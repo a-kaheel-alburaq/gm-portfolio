@@ -1254,12 +1254,14 @@ textarea {
 /*--------------------------------------------------------------
 #  Careers first page 
 --------------------------------------------------------------*/
+
+
 /* Wrapper for both cards to stay in the same row */
 .career-cards-wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
+  /* gap: 20px; */
 }
 
 /* Styling for both cards */

@@ -4,6 +4,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
 !(function ($) {
   "use strict";
 
@@ -46,7 +47,7 @@
   // Mobile Navigation
   if ($('.nav-menu').length) {
     var $mobile_nav = $('.nav-menu').clone().prop({
-      class: 'mobile-nav d-lg-none'
+      class: 'mobile-nav '
     });
     $('body').append($mobile_nav);
     $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>');
@@ -121,9 +122,11 @@
     autoplay: true,
     dots: true,
     loop: true,
+    autoplayTimeout: 1000, // Adjust speed
+    autoplayHoverPause: true, // Pause on hover
     responsive: {
       0: {
-        items: 2
+        items: 3
       },
       768: {
         items: 4
@@ -159,60 +162,90 @@ document.querySelectorAll('.toggle-details').forEach(toggle => {
     }
   });
 });
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the carousel element
+  const myCarousel = document.querySelector('#heroCarousel');
 
-// Get all the custom indicator buttons
-const customIndicators = document.querySelectorAll('.custom-indicators button');
+  // Check if the carousel element exists
+  if (myCarousel) {
+    const carousel = new bootstrap.Carousel(myCarousel);
 
-// Get the carousel element
-const myCarousel = document.querySelector('#heroCarousel');
-const carousel = new bootstrap.Carousel(myCarousel);
+    // Get all the custom indicator buttons
+    const customIndicators = document.querySelectorAll('.custom-indicators button');
 
-// Add event listeners for each custom indicator button
-customIndicators.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    // Navigate to the corresponding slide
-    carousel.to(index);
+    // Add event listeners for each custom indicator button
+    customIndicators.forEach((button, index) => {
+      button.addEventListener('click', () => {
+        // Navigate to the corresponding slide
+        carousel.to(index);
 
-    // Update the active class on the buttons
-    customIndicators.forEach((btn) => btn.classList.remove('active'));
-    button.classList.add('active');
-  });
-});
+        // Update the active class on the buttons
+        customIndicators.forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
 
-// Optionally, sync the active class on page load
-myCarousel.addEventListener('slide.bs.carousel', (event) => {
-  const currentIndex = event.to; // The index of the new slide
-  customIndicators.forEach((button, index) => {
-    if (index === currentIndex) {
-      button.classList.add('active');
-    } else {
-      button.classList.remove('active');
-    }
-  });
+    // Optionally, sync the active class on page load
+    myCarousel.addEventListener('slide.bs.carousel', (event) => {
+      const currentIndex = event.to; // The index of the new slide
+      customIndicators.forEach((button, index) => {
+        if (index === currentIndex) {
+          button.classList.add('active');
+        } else {
+          button.classList.remove('active');
+        }
+      });
+    });
+  } else {
+    console.error('Carousel element not found');
+  }
 });
 
 
 //video
 document.addEventListener("DOMContentLoaded", function () {
-  const videoButton = document.getElementById("play-video");
-  const modal = document.getElementById("video-modal");
-  const closeButton = document.getElementById("close-video");
-  const video = document.getElementById("internal-video");
+  function setupVideoModal(playId, modalId, closeId, videoId) {
+    const playBtn = document.getElementById(playId);
+    const modal = document.getElementById(modalId);
+    const closeBtn = document.getElementById(closeId);
+    const video = document.getElementById(videoId);
 
-  // Open video modal
-  videoButton.addEventListener("click", function (e) {
-    e.preventDefault();  // Prevent any default action
-    modal.style.display = "flex"; // Show modal
-    video.play(); // Play the video
-  });
+    if (playBtn && modal && closeBtn && video) {
+      playBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        modal.style.display = "grid";
+        video.play();
+      });
 
-  // Close video modal
-  closeButton.addEventListener("click", function () {
-    video.pause(); // Pause video
-    video.currentTime = 0; // Reset video
-    modal.style.display = "none"; // Hide modal
-  });
+      closeBtn.addEventListener("click", function () {
+        video.pause();
+        video.currentTime = 0;
+        modal.style.display = "none";
+      });
+
+    }
+  }
+
+  setupVideoModal("play-video", "video-modal", "close-video", "internal-video"); // desktop
+  setupVideoModal("play-video-tablet", "video-modal-tablet", "close-video-tablet", "internal-video-tablet"); // tablet
+  setupVideoModal("play-video-mobile", "video-modal-mobile", "close-video-mobile", "internal-video-mobile"); // mobile
 });
+document.addEventListener('fullscreenchange', toggleFullscreenClass);
+document.addEventListener('webkitfullscreenchange', toggleFullscreenClass); // Safari
+document.addEventListener('mozfullscreenchange', toggleFullscreenClass);    // Firefox
+document.addEventListener('MSFullscreenChange', toggleFullscreenClass);     // IE/Edge
+
+function toggleFullscreenClass() {
+  const modal = document.querySelector('.video-modal');
+  if (!modal) return;
+
+  if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
+    modal.classList.add('fullscreen-mode');
+  } else {
+    modal.classList.remove('fullscreen-mode');
+  }
+}
+
 
 //Brief sectoin Counter Animation
 // Counter animation
@@ -251,6 +284,11 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.stats-box').forEach((box) => {
     observer.observe(box);
   });
+
+  // Observe each stats-box
+  document.querySelectorAll('.stats-box-mobile').forEach((box) => {
+    observer.observe(box);
+  });
 });
 
 $(document).ready(function () {
@@ -259,7 +297,8 @@ $(document).ready(function () {
     margin: 10,
     dots: true, // Ensure this is set to true
     autoplay: true,
-    autoplayTimeout: 5000,
+    autoplayHoverPause: true, // Pause on hover
+    autoplayTimeout: 1000,
     responsive: {
       0: { items: 1 },
       768: { items: 2 },
@@ -319,3 +358,53 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+$(document).ready(function () {
+  $("#careers-carousel-2lines").owlCarousel({
+    items: 1,  // One item per slide
+    loop: true,  // Infinite loop
+    margin: 10,  // Space between items
+    nav: false,  // Disable arrows
+    dots: true,  // Enable dots navigation
+    autoplay: true,  // Enable autoplay
+    autoplayTimeout: 1000,  // 1 seconds for each slide
+    autoplayHoverPause: true  // Pause autoplay on hover
+  });
+});
+
+
+//News carousel:
+$(document).ready(function () {
+  $(".news-carousel").owlCarousel({
+    loop: true,
+    margin: 15,
+    nav: false,
+    dots: true,
+    items: 1,
+    autoplay: false,
+    autoplayTimeout: 1000,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      992: {
+        items: 3
+      }
+    }
+  });
+});
+
+$(document).ready(function () {
+  $(".stats-carousel").owlCarousel({
+    items: 1,
+    center: true,
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 1000
+  });
+});

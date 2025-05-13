@@ -3,19 +3,19 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('about/', views.about, name='about'),
-    path('about/heritage/', views.heritage, name='heritage'),
-    path('about/team/', views.team, name='team'),
-    path('about/corporate-governance/', views.corporate_governance, name='corporate-governance'),
-    path('about/vision-mission-values/', views.vision_mission_values, name='vision-mission-values'),
+    path('whoweare/', views.about, name='about'),
+    path('heritage/', views.heritage, name='heritage'),
+    path('team/', views.team, name='team'),
+    path('corporate-governance/', views.corporate_governance, name='corporate-governance'),
+    path('vision-mission-values/', views.vision_mission_values, name='vision-mission-values'),
 
     # Media Pages
-    path('media/photos-videos/', views.photos_videos, name='photos-videos'),
-    path('media/news-insights/', views.news_insights, name='news-insights'),
+    path('photos-videos/', views.photos_videos, name='photos-videos'),
+    path('news-insights/', views.news_insights, name='news-insights'),
 
     # Commitments Pages
-    path('commitments/sustainability/', views.sustainability, name='sustainability'),
-    path('commitments/saudi-vision/', views.saudi_vision, name='saudi-vision'),
+    path('sustainability/', views.sustainability, name='sustainability'),
+    path('saudi-vision/', views.saudi_vision, name='saudi-vision'),
 
     # Products Pages
     path('meats/', views.meats, name='meats'),
@@ -30,9 +30,9 @@ urlpatterns = [
     # path('products_/', views.products, name='products_all'),
     
     # Contact Us Dropdown Pages
-    path('contact-us/sales/', views.sales, name='sales'),
-    path('contact-us/info/', views.contact_info, name='contact-info'),
-    path('products/filter/', views.products_filter, name='products_filter'),
+    path('sales/', views.sales, name='sales'),
+    path('info/', views.contact_info, name='contact-info'),
+    path('filter/', views.products_filter, name='products_filter'),
 
     # Careers
     path('careers/', views.careers, name='careers'),

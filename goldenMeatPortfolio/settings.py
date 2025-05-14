@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +27,7 @@ SECRET_KEY = 'django-insecure-&w5t9v#*(rdxw3ua!oj49ma^=$_qe_*0jd&=*$bf_4y-p&s8o1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', '68.183.68.146', 'goldenmeat.com.sa', 'www.goldenmeat.com.sa']
+ALLOWED_HOSTS = ['*', '68.183.68.146', 'goldenmeat.com.sa', 'www.goldenmeat.com.sa', '207.154.215.96']
 
 
 # Application definition
@@ -124,6 +126,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+# MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = [BASE_DIR / 'static']  
-STATIC_ROOT = BASE_DIR / 'staticfiles' 
+# STATIC_ROOT = BASE_DIR / 'staticfiles' 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

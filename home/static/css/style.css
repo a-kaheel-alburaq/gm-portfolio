@@ -530,6 +530,14 @@ input[type="date"]:valid+.date-placeholder {
 
 }
 
+/* Fix for small screens */
+@media (max-width: 576px) {
+  .info-section .card-description2 {
+    margin-top: 0;
+    /* Remove negative margin on small screens */
+  }
+}
+
 .info-section .working-hours li {
   list-style: none;
   margin-bottom: 15px;

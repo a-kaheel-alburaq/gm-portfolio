@@ -2764,6 +2764,10 @@ section {
   display: block;
 }
 
+.mobile-view-heritage {
+  display: none;
+}
+
 @media (max-width: 992px) {
   .desktop-view-heritage {
     display: none;

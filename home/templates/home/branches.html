@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+
 <br><br><br><br><br>
 
 <section class="section-bg">
@@ -60,7 +61,7 @@
                 <i class="fas fa-phone"></i> +966114133338
               </p>
             </div>
-            <a href="https://www.google.com/maps" target="_blank" class="btn-directions">Get Directions</a>
+          <a href="https://maps.app.goo.gl/P4w9TjGVrsVpu5y67" target="_blank" class="btn-directions">Get Directions</a>
           </div>
         </div>
       
@@ -77,7 +78,7 @@
                 <i class="fas fa-phone"></i> +966114133338
               </p>
             </div>
-            <a href="https://www.google.com/maps" target="_blank" class="btn-directions">Get Directions</a>
+          <a href="https://maps.app.goo.gl/bTSz87N7xZwstDyx8" target="_blank" class="btn-directions">Get Directions</a>
           </div>
         </div>
       
@@ -94,7 +95,7 @@
                 <i class="fas fa-phone"></i> +966114133338
               </p>
             </div>
-            <a href="https://www.google.com/maps" target="_blank" class="btn-directions">Get Directions</a>
+          <a href="https://maps.app.goo.gl/LF7fCyqre2fiZ15U8" target="_blank" class="btn-directions">Get Directions</a>
           </div>
         </div>
       
@@ -111,7 +112,7 @@
                 <i class="fas fa-phone"></i> +966114133339
               </p>
             </div>
-            <a href="https://www.google.com/maps" target="_blank" class="btn-directions">Get Directions</a>
+          <a href="https://maps.app.goo.gl/Y1qb4z1tC5tm5ReN6" target="_blank" class="btn-directions">Get Directions</a>
           </div>
         </div>
       </div>
@@ -132,7 +133,7 @@
               <i class="fas fa-phone"></i> +966114133338
             </p>
           </div>
-          <a href="https://www.google.com/maps" target="_blank" class="btn-directions">Get Directions</a>
+          <a href="https://maps.app.goo.gl/P4w9TjGVrsVpu5y67" target="_blank" class="btn-directions">Get Directions</a>
         </div>
       </div>
     
@@ -149,7 +150,7 @@
               <i class="fas fa-phone"></i> +966114133338
             </p>
           </div>
-          <a href="https://www.google.com/maps" target="_blank" class="btn-directions">Get Directions</a>
+          <a href="https://maps.app.goo.gl/bTSz87N7xZwstDyx8" target="_blank" class="btn-directions">Get Directions</a>
         </div>
       </div>
     
@@ -166,7 +167,7 @@
               <i class="fas fa-phone"></i> +966114133338
             </p>
           </div>
-          <a href="https://www.google.com/maps" target="_blank" class="btn-directions">Get Directions</a>
+          <a href="https://maps.app.goo.gl/LF7fCyqre2fiZ15U8" target="_blank" class="btn-directions">Get Directions</a>
         </div>
       </div>
     
@@ -183,7 +184,7 @@
               <i class="fas fa-phone"></i> +966114133339
             </p>
           </div>
-          <a href="https://www.google.com/maps" target="_blank" class="btn-directions">Get Directions</a>
+          <a href="https://maps.app.goo.gl/Y1qb4z1tC5tm5ReN6" target="_blank" class="btn-directions">Get Directions</a>
         </div>
       </div>
     </div>
@@ -193,47 +194,50 @@
 
 <script>
   const branches = {
-    1: {
-      photo: '{% static "img/whoweare/2.jpg" %}',
-      name: 'Riyadh Branch',
-      contact: 'Phone: +966114133338',
-    },
-    2: {
-      photo: '{% static "img/whoweare/2.jpg" %}',
-      name: 'Dammam Branch',
-      contact: 'Phone: +966114133338',
-    },
-    3: {
-      photo: '{% static "img/whoweare/2.jpg" %}',
-      name: 'Jeddah Branch',
-      contact: 'Phone: +966114133338',
-    },
-    4: {
-      photo: '{% static "img/whoweare/2.jpg" %}',
-      name: 'Southern Branch',
-      contact: 'Phone: +966114133338',
-    },
-  };
-
-  function showBranchDetails(branchId) {
-    const branch = branches[branchId];
-    const card = document.getElementById('branch-details-card');
-
-    // Update card content
-    card.querySelector('.branch-photo').src = branch.photo;
-    card.querySelector('.branch-name').textContent = branch.name;
-    card.querySelector('.branch-contact').textContent = branch.contact;
-
-    // Position the card near the pin (to the left of the pin)
-    const pin = document.getElementById(`pin-${branchId}`);
-    const rect = pin.getBoundingClientRect();
-    card.style.top = `${rect.top + window.scrollY}px`;
-    card.style.left = `${rect.left + window.scrollX - card.offsetWidth - 10}px`; // Adjusted to open on the left
-
-    // Show the card with animation
-    card.classList.remove('hidden');
-    card.classList.add('show');
+  1: {
+    photo: '{% static "img/whoweare/2.jpg" %}',
+    name: 'Riyadh Branch',
+    contact: 'Phone: +966114133338',
+    mapLink: 'https://maps.app.goo.gl/P4w9TjGVrsVpu5y67'
+  },
+  2: {
+    photo: '{% static "img/whoweare/2.jpg" %}',
+    name: 'Dammam Branch',
+    contact: 'Phone: +966114133338',
+    mapLink: 'https://maps.app.goo.gl/bTSz87N7xZwstDyx8'
+  },
+  3: {
+    photo: '{% static "img/whoweare/2.jpg" %}',
+    name: 'Jeddah Branch',
+    contact: 'Phone: +966114133338',
+    mapLink: 'https://maps.app.goo.gl/LF7fCyqre2fiZ15U8'
+  },
+  4: {
+    photo: '{% static "img/whoweare/2.jpg" %}',
+    name: 'Southern Branch',
+    contact: 'Phone: +966114133339',
+    mapLink: 'https://maps.app.goo.gl/Y1qb4z1tC5tm5ReN6'
   }
+};
+
+function showBranchDetails(branchId) {
+  const branch = branches[branchId];
+  const card = document.getElementById('branch-details-card');
+
+  card.querySelector('.branch-photo').src = branch.photo;
+  card.querySelector('.branch-name').textContent = branch.name;
+  card.querySelector('.branch-contact').textContent = branch.contact;
+  card.querySelector('.directions-btn').href = branch.mapLink;
+
+  const pin = document.getElementById(`pin-${branchId}`);
+  const rect = pin.getBoundingClientRect();
+  card.style.top = `${rect.top + window.scrollY}px`;
+  card.style.left = `${rect.left + window.scrollX - card.offsetWidth - 10}px`;
+
+  card.classList.remove('hidden');
+  card.classList.add('show');
+}
+
 
   function closeBranchDetails() {
     const card = document.getElementById('branch-details-card');

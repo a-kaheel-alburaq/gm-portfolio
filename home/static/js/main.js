@@ -372,6 +372,34 @@ $(document).ready(function () {
 });
 
 
+$(document).ready(function () {
+  $("#careers-carousel-2lines-mobile").owlCarousel({
+    items: 1,  // One item per slide
+    loop: true,  // Infinite loop
+    margin: 10,  // Space between items
+    nav: false,  // Disable arrows
+    dots: true,  // Enable dots navigation
+    autoplay: true,  // Enable autoplay
+    autoplayTimeout: 3000,  // 3 seconds for each slide
+    autoplayHoverPause: true  // Pause autoplay on hover
+  });
+});
+
+
+$(document).ready(function () {
+  $("#careers-carousel-2lines-tablet").owlCarousel({
+    items: 1,  // One item per slide
+    loop: true,  // Infinite loop
+    margin: 10,  // Space between items
+    nav: false,  // Disable arrows
+    dots: true,  // Enable dots navigation
+    autoplay: true,  // Enable autoplay
+    autoplayTimeout: 3000,  // 3 seconds for each slide
+    autoplayHoverPause: true  // Pause autoplay on hover
+  });
+});
+
+
 //News carousel:
 $(document).ready(function () {
   $(".news-carousel").owlCarousel({

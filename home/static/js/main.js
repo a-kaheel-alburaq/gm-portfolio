@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function animateCounter(counter) {
     const target = +counter.getAttribute('data-target');
     let count = 0;
-    const speed = target / 200;  // Adjust speed to control how fast the counter increases
+    const speed = target / 200;  // How fast the counter increases
 
     const interval = setInterval(() => {
       count += speed;
@@ -298,7 +298,7 @@ $(document).ready(function () {
     dots: true, // Ensure this is set to true
     autoplay: true,
     autoplayHoverPause: true, // Pause on hover
-    autoplayTimeout: 1000,
+    autoplayTimeout: 4000,
     responsive: {
       0: { items: 1 },
       768: { items: 2 },
@@ -366,7 +366,7 @@ $(document).ready(function () {
     nav: false,  // Disable arrows
     dots: true,  // Enable dots navigation
     autoplay: true,  // Enable autoplay
-    autoplayTimeout: 1000,  // 1 seconds for each slide
+    autoplayTimeout: 3000,  // 3 seconds for each slide
     autoplayHoverPause: true  // Pause autoplay on hover
   });
 });
@@ -381,7 +381,7 @@ $(document).ready(function () {
     dots: true,
     items: 1,
     autoplay: false,
-    autoplayTimeout: 1000,
+    autoplayTimeout: 3000,
     responsive: {
       0: {
         items: 1
@@ -405,6 +405,6 @@ $(document).ready(function () {
     nav: false,
     dots: true,
     autoplay: true,
-    autoplayTimeout: 1000
+    autoplayTimeout: 5000
   });
 });

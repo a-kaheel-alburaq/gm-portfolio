@@ -1,0 +1,210 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %}
+<br><br><br><br><br>
+
+<section class="info-section" >
+  <div class="container">
+    <div class="row">
+      <!-- Working Hours Card -->
+      <div class="col">
+        <div class="card equal-height">
+          <h3 class="card-title">Our Business Hours</h3>
+          <p class="card-description">
+            Our friendly staff will be happy to assist you with any questions or concerns you may have.
+          </p>
+          <ul class="working-hours">
+            <li>
+              <span class="day">Monday</span>
+              <span class="hours">10:00AM - 07:00PM</span>
+            </li>
+            <li>
+              <span class="day">Tuesday</span>
+              <span class="hours">10:00AM - 07:00PM</span>
+            </li>
+            <li>
+              <span class="day">Wednesday</span>
+              <span class="hours">10:00AM - 07:00PM</span>
+            </li>
+            <li>
+              <span class="day">Thursday</span>
+              <span class="hours">10:00AM - 07:00PM</span>
+            </li>
+            <li>
+              <span class="day">Friday</span>
+              <span class="hours">Closed</span>
+            </li>
+            <li>
+              <span class="day">Saturday</span>
+              <span class="hours">10:00AM - 07:00PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Contact Information Card -->
+      <div class="col">
+        <div class="card equal-height">
+          <h3 class="card-title">You’re Always Welcome to Visit Us</h3>
+          <p class="card-description2 ">
+            Our friendly staff will be happy to assist you with any questions or concerns you may have.
+          </p>
+          <ul class="contact-info">
+            <li class="first-item">
+              <i class="fas fa-phone "></i> Call Now: +966112631842
+            </li>
+            <li class="second-item">
+              <i class="fas fa-envelope "></i> Email: info@goldenmeat.com.sa
+            </li>
+            <li class="third-item">
+              <i class="fas fa-map-marker-alt"></i> Address: Al-Riyadh Development Centre, King Fahd Road
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-bg" id="contact-form">
+  <div class="container">
+    <div class="contact-form">
+      <h3 class="form-title">Send Us a Message</h3>
+      <form id="contactForm" onsubmit="sendEmail(event)">
+        <div class="form-group">
+          <label class="form-label">Choose Recipient:</label>
+          <div class="recipient-radio" required>
+            <label class="radio-choice">
+              <input type="radio" name="recipient" value="Sales" id="sales" class="recipient-radio-input">
+              <span class="radio-custom"></span>
+              <span class="radio-label">Sales</span>
+            </label>
+          
+            <label class="radio-choice">
+              <input type="radio" name="recipient" value="Purchase" id="purchase" class="recipient-radio-input">
+              <span class="radio-custom"></span>
+              <span class="radio-label">Purchase</span>
+            </label>
+          
+            <label class="radio-choice">
+              <input type="radio" name="recipient" value="Info" id="info" class="recipient-radio-input">
+              <span class="radio-custom"></span>
+              <span class="radio-label">Info</span>
+            </label>
+          </div>
+          
+        </div>
+
+        <div class="form-group">
+          <input placeholder="Name" type="text" id="subject" name="subject" class="form-control" required>
+        </div>
+        
+        
+        
+        <div class="form-group">
+          <input placeholder="Email" type="text" id="subject" name="subject" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <input placeholder="Phone number" type="tel" id="subject" name="subject" 
+          class="form-control" required pattern="[0-9]+" 
+          onkeypress="return /[0-9]/i.test(event.key)">        </div>
+
+          <div class="form-group">
+            <input placeholder="Subject" type="text" id="subject" name="subject" class="form-control" required>
+          </div>
+          
+        <div class="form-group">
+          <textarea placeholder="Message (max 1000 charachter)" maxlength="1000" id="message" name="message" class="form-control" rows="4" required></textarea>
+        </div>  
+        
+        <button type="submit" class="btn btn-send-msg">
+          <img src="{% static 'img/icons/logo.png' %}" alt="Logo" style="width: 20px; height: 20px;"> Send Message
+        </button>
+      </form>
+      
+      <div id="thankYouMessage" class="hidden">
+        Thank you! The message has been sent and our team will contact you soon!
+      </div>
+      
+
+
+
+      
+  </div>
+</section>
+
+
+
+
+<script>
+  document.getElementById('phone').addEventListener('input', function (e) {
+    // Allow only numbers
+    this.value = this.value.replace(/[^0-9]/g, '');
+
+    // Move to the next field after 10 digits
+    if (this.value.length === 10) {
+        document.getElementById('nextField').focus();
+    }
+});
+
+// Update the recipient when a dropdown option is selected
+function setRecipient(recipientName, email) {
+  // Set the selected recipient's email in the hidden input field
+  document.getElementById('recipient').value = email;
+
+  // Update the button text to show the selected option name
+  const button = document.getElementById('recipient-dropdown');
+  button.innerHTML = `${recipientName} <i class="fa fa-chevron-down"></i>`;
+}
+
+// Send email when the form is submitted
+function sendEmail(event) {
+  event.preventDefault(); // Prevent form submission
+
+  const recipient = document.getElementById("recipient").value;
+  const subject = document.getElementById("subject").value;
+  const message = document.getElementById("message").value;
+
+  if (!recipient) {
+    alert("Please select a recipient.");
+    return;
+  }
+
+  // Simulate email sending (replace with actual backend logic)
+  console.log(`Sending email to: ${recipient}`);
+  console.log(`Subject: ${subject}`);
+  console.log(`Message: ${message}`);
+
+  // Show the thank-you message 
+  document.getElementById("thankYouMessage").classList.remove("hidden");
+
+  // Clear form fields
+  document.getElementById("contactForm").reset();
+
+  // Reset the recipient dropdown text
+  document.getElementById('recipient-dropdown').innerHTML = `Choose Recipient <i class="fa fa-chevron-down"></i>`;
+}
+
+</script>
+
+
+
+<!-- LLC or company -->
+<script>
+  function toggleFormGroup() {
+    var selectedValue = document.getElementById("options").value;
+    
+    document.getElementById("business-group").style.display = "none";
+    document.getElementById("individual-group").style.display = "none";
+
+    if (selectedValue === "business") {
+      document.getElementById("business-group").style.display = "block";
+    } else if (selectedValue === "individual") {
+      document.getElementById("individual-group").style.display = "block";
+    } 
+  }
+</script>
+
+{% endblock %}
+

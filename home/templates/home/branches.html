@@ -1,0 +1,250 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<br><br><br><br><br>
+
+<section class="section-bg">
+  <div class="container">
+    <h2>Branches</h2>
+
+    <!-- Map with Branch Locations -->
+    <div class="map-container">
+      <!-- Map Image -->
+      <img src="{% static 'img/maps.png' %}" alt="Map" class="map-image">
+
+      <!-- Branch 1 Pin -->
+      <div class="pin" id="pin-1" style="top: 38%; left: 49.4%;" onclick="showBranchDetails(1)">
+        <img src="{% static 'img/Logo-goldenmeat.png' %}" alt="Branch Logo" class="pin-logo">
+      </div>
+
+      <!-- Branch 2 Pin -->
+      <div class="pin" id="pin-2" style="top: 27%; left: 58.4%;" onclick="showBranchDetails(2)">
+        <img src="{% static 'img/Logo-goldenmeat.png' %}" alt="Branch Logo" class="pin-logo">
+      </div>
+
+      <!-- Branch 3 Pin -->
+      <div class="pin" id="pin-3" style="top: 58%; left: 29.4%;" onclick="showBranchDetails(3)">
+        <img src="{% static 'img/Logo-goldenmeat.png' %}" alt="Branch Logo" class="pin-logo">
+      </div>
+
+      <!-- Branch 4 Pin -->
+      <div class="pin" id="pin-4" style="top: 72%; left: 40%;" onclick="showBranchDetails(4)">
+        <img src="{% static 'img/Logo-goldenmeat.png' %}" alt="Branch Logo" class="pin-logo">
+      </div>
+    </div>
+
+    <!-- Branch Details Card -->
+    <div id="branch-details-card" class="branch-details-card hidden">
+      <div class="card-content">
+        <button class="close-btn" onclick="closeBranchDetails()">×</button>
+        <img src="" alt="Branch Photo" class="branch-photo">
+        <h4 class="branch-name"></h4>
+        <p class="branch-contact"></p>
+        <a href="https://www.google.com/maps" target="_blank" class="directions-btn">Get Directions</a>
+      </div>
+    </div>
+
+    <!-- Branch Information Cards (4 columns) -->
+    <div class="row branch-cards">
+        <div class="col-3">
+          <div class="card branch-card small-card">
+            <img src="{% static 'img/whoweare/2.jpg' %}" alt="Branch 1">
+            <h3 class="branch-name">Riyadh Branch</h3>
+            <hr>
+            <div class="branch-details">
+              <p class="branch-address">
+                <i class="fas fa-map-marker-alt"></i> 1234 Main St, Riyadh, Saudi Arabia
+              </p>
+              <p class="branch-contact">
+                <i class="fas fa-phone"></i> +966114133338
+              </p>
+            </div>
+          <a href="https://maps.app.goo.gl/P4w9TjGVrsVpu5y67" target="_blank" class="btn-directions">Get Directions</a>
+          </div>
+        </div>
+      
+        <div class="col-3">
+          <div class="card branch-card small-card">
+            <img src="{% static 'img/whoweare/2.jpg' %}" alt="Branch 2">
+            <h3 class="branch-name">Dammam Branch</h3>
+            <hr>
+            <div class="branch-details">
+              <p class="branch-address">
+                <i class="fas fa-map-marker-alt"></i> 1234 Main St, Dammam, Saudi Arabia
+              </p>
+              <p class="branch-contact">
+                <i class="fas fa-phone"></i> +966114133338
+              </p>
+            </div>
+          <a href="https://maps.app.goo.gl/bTSz87N7xZwstDyx8" target="_blank" class="btn-directions">Get Directions</a>
+          </div>
+        </div>
+      
+        <div class="col-3">
+          <div class="card branch-card small-card">
+            <img src="{% static 'img/whoweare/2.jpg' %}" alt="Branch 3">
+            <h3 class="branch-name">Jeddah Branch</h3>
+            <hr>
+            <div class="branch-details">
+              <p class="branch-address">
+                <i class="fas fa-map-marker-alt"></i> 1234 Main St, Jeddah, Saudi Arabia
+              </p>
+              <p class="branch-contact">
+                <i class="fas fa-phone"></i> +966114133338
+              </p>
+            </div>
+          <a href="https://maps.app.goo.gl/LF7fCyqre2fiZ15U8" target="_blank" class="btn-directions">Get Directions</a>
+          </div>
+        </div>
+      
+        <div class="col-3">
+          <div class="card branch-card small-card">
+            <img src="{% static 'img/whoweare/2.jpg' %}" alt="Branch 4">
+            <h3 class="branch-name">South Branch</h3>
+            <hr>
+            <div class="branch-details">
+              <p class="branch-address">
+                <i class="fas fa-map-marker-alt"></i> 1234 Main St, Southern Region, Saudi Arabia
+              </p>
+              <p class="branch-contact">
+                <i class="fas fa-phone"></i> +966114133338
+              </p>
+            </div>
+          <a href="https://maps.app.goo.gl/Y1qb4z1tC5tm5ReN6" target="_blank" class="btn-directions">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- for mobile -->
+    <div class="row branch-cards mobile-only">
+      <div class="col-12">
+        <div class="card branch-card small-card">
+          <img src="{% static 'img/whoweare/2.jpg' %}" alt="Branch 1">
+          <h3 class="branch-name">Riyadh Branch</h3>
+          <hr>
+          <div class="branch-details">
+            <p class="branch-address">
+              <i class="fas fa-map-marker-alt"></i> 1234 Main St, Riyadh, Saudi Arabia
+            </p>
+            <p class="branch-contact">
+              <i class="fas fa-phone"></i> +966114133338
+            </p>
+          </div>
+          <a href="https://maps.app.goo.gl/P4w9TjGVrsVpu5y67" target="_blank" class="btn-directions">Get Directions</a>
+        </div>
+      </div>
+    
+      <div class="col-12">
+        <div class="card branch-card small-card">
+          <img src="{% static 'img/whoweare/2.jpg' %}" alt="Branch 2">
+          <h3 class="branch-name">Dammam Branch</h3>
+          <hr>
+          <div class="branch-details">
+            <p class="branch-address">
+              <i class="fas fa-map-marker-alt"></i> 1234 Main St, Dammam, Saudi Arabia
+            </p>
+            <p class="branch-contact">
+              <i class="fas fa-phone"></i> +966114133338
+            </p>
+          </div>
+          <a href="https://maps.app.goo.gl/bTSz87N7xZwstDyx8" target="_blank" class="btn-directions">Get Directions</a>
+        </div>
+      </div>
+    
+      <div class="col-12">
+        <div class="card branch-card small-card">
+          <img src="{% static 'img/whoweare/2.jpg' %}" alt="Branch 3">
+          <h3 class="branch-name">Jeddah Branch</h3>
+          <hr>
+          <div class="branch-details">
+            <p class="branch-address">
+              <i class="fas fa-map-marker-alt"></i> 1234 Main St, Jeddah, Saudi Arabia
+            </p>
+            <p class="branch-contact">
+              <i class="fas fa-phone"></i> +966114133338
+            </p>
+          </div>
+          <a href="https://maps.app.goo.gl/LF7fCyqre2fiZ15U8" target="_blank" class="btn-directions">Get Directions</a>
+        </div>
+      </div>
+    
+      <div class="col-12">
+        <div class="card branch-card small-card">
+          <img src="{% static 'img/whoweare/2.jpg' %}" alt="Branch 4">
+          <h3 class="branch-name">South Branch</h3>
+          <hr>
+          <div class="branch-details">
+            <p class="branch-address">
+              <i class="fas fa-map-marker-alt"></i> 1234 Main St, Southern Region, Saudi Arabia
+            </p>
+            <p class="branch-contact">
+              <i class="fas fa-phone"></i> +966114133338
+            </p>
+          </div>
+          <a href="https://maps.app.goo.gl/Y1qb4z1tC5tm5ReN6" target="_blank" class="btn-directions">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<script>
+  const branches = {
+  1: {
+    photo: '{% static "img/whoweare/2.jpg" %}',
+    name: 'Riyadh Branch',
+    contact: 'Phone: +966114133338',
+    mapLink: 'https://maps.app.goo.gl/P4w9TjGVrsVpu5y67'
+  },
+  2: {
+    photo: '{% static "img/whoweare/2.jpg" %}',
+    name: 'Dammam Branch',
+    contact: 'Phone: +966114133338',
+    mapLink: 'https://maps.app.goo.gl/bTSz87N7xZwstDyx8'
+  },
+  3: {
+    photo: '{% static "img/whoweare/2.jpg" %}',
+    name: 'Jeddah Branch',
+    contact: 'Phone: +966114133338',
+    mapLink: 'https://maps.app.goo.gl/LF7fCyqre2fiZ15U8'
+  },
+  4: {
+    photo: '{% static "img/whoweare/2.jpg" %}',
+    name: 'Southern Branch',
+    contact: 'Phone: +966114133338',
+    mapLink: 'https://maps.app.goo.gl/Y1qb4z1tC5tm5ReN6'
+  }
+};
+
+function showBranchDetails(branchId) {
+  const branch = branches[branchId];
+  const card = document.getElementById('branch-details-card');
+
+  card.querySelector('.branch-photo').src = branch.photo;
+  card.querySelector('.branch-name').textContent = branch.name;
+  card.querySelector('.branch-contact').textContent = branch.contact;
+  card.querySelector('.directions-btn').href = branch.mapLink;
+
+  const pin = document.getElementById(`pin-${branchId}`);
+  const rect = pin.getBoundingClientRect();
+  card.style.top = `${rect.top + window.scrollY}px`;
+  card.style.left = `${rect.left + window.scrollX - card.offsetWidth - 10}px`;
+
+  card.classList.remove('hidden');
+  card.classList.add('show');
+}
+
+
+  function closeBranchDetails() {
+    const card = document.getElementById('branch-details-card');
+    card.classList.remove('show');
+    card.classList.add('hidden');
+  }
+</script>
+
+
+{% endblock %}

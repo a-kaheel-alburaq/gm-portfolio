@@ -1,0 +1,168 @@
+
+{% extends "home/base.html" %}
+{% load static %}
+        
+{% block content %}
+<br><br><br><br><br>
+<section class=" section-bg">
+    <div class="container">
+
+  <!-- Search Engine -->
+  <div class="search-container">
+    <input type="text" class="search-input" placeholder="Search for jobs...">
+    <button class="search-button">
+      <i class="fas fa-search"></i> Search
+    </button>
+  </div>
+
+<div class="jobs-container">
+
+<!-- Filter Sidebar -->
+<div class="filters">
+    <!-- Job Location Filter -->
+    <div class="filter-group">
+      <button class="filter-toggle">
+        <i class="fas fa-map-marker-alt"></i> Job Location 
+        <i class="fas fa-chevron-down toggle-arrow"></i>
+      </button>
+      <div class="filter-options">
+        <input type="checkbox" id="location1"><label for="location1">Riyadh</label><br>
+        <input type="checkbox" id="location2"><label for="location2">Khobar</label><br>
+        <input type="checkbox" id="location3"><label for="location3">Jeddah</label><br>
+      </div>
+    </div>
+  
+    <!-- Job Role Filter -->
+    <div class="filter-group">
+      <button class="filter-toggle">
+        <i class="fas fa-briefcase"></i> Job Role 
+        <i class="fas fa-chevron-down toggle-arrow"></i>
+      </button>
+      <div class="filter-options">
+        <input type="checkbox" id="role1"><label for="role1">Developer</label><br>
+        <input type="checkbox" id="role2"><label for="role2">Designer</label><br>
+        <input type="checkbox" id="role3"><label for="role3">Project Manager</label><br>
+      </div>
+    </div>
+  
+    <!-- Industry Filter -->
+    <div class="filter-group">
+      <button class="filter-toggle">
+        <i class="fas fa-industry"></i> Department 
+        <i class="fas fa-chevron-down toggle-arrow"></i>
+      </button>
+      <div class="filter-options">
+        <input type="checkbox" id="industry1"><label for="industry1">IT</label><br>
+        <input type="checkbox" id="industry2"><label for="industry2">Finance</label><br>
+        <input type="checkbox" id="industry3"><label for="industry3">Marketing</label><br>
+      </div>
+    </div>
+  
+    <!-- Employment Status Filter -->
+    <div class="filter-group">
+      <button class="filter-toggle">
+        <i class="fas fa-users"></i> Employment Status 
+        <i class="fas fa-chevron-down toggle-arrow"></i>
+      </button>
+      <div class="filter-options">
+        <input type="checkbox" id="status1"><label for="status1">Full-Time</label><br>
+        <input type="checkbox" id="status2"><label for="status2">Part-Time</label><br>
+        <input type="checkbox" id="status3"><label for="status3">Remotly</label><br>
+      </div>
+    </div>
+  </div>
+  
+  
+        
+            <!-- Job Cards List -->
+            <div class="job-cards">
+                <!-- Repeat for each job -->
+                <div class="job-card">
+                  <h3 class="job-title">
+                    Software Developer
+                  </h3>
+                  
+                  <div class="job-details">
+                    <p class="job-location">
+                      <i class="fas fa-map-marker-alt"></i> Khobar
+                    </p>
+                    <p class="job-role">
+                      <i class="fas fa-briefcase"></i> Full Stack Developer
+                    </p>
+                    <p class="job-industry">
+                      <i class="fas fa-industry"></i> IT
+                    </p>
+                    <p class="job-status">
+                      <i class="fas fa-users"></i> Full-Time
+                    </p>
+                  </div>
+                  
+                  <a href="{% url 'job_details' %}" class="view-details">View Job Details</a>
+                </div>
+                
+                <div class="job-card">
+                  <h3 class="job-title">
+                     UX Designer
+                  </h3>
+                  
+                  <div class="job-details">
+                    <p class="job-location">
+                      <i class="fas fa-map-marker-alt"></i> Riyadh
+                    </p>
+                    <p class="job-role">
+                      <i class="fas fa-briefcase"></i> Designer
+                    </p>
+                    <p class="job-industry">
+                      <i class="fas fa-industry"></i> Designing
+                    </p>
+                    <p class="job-status">
+                      <i class="fas fa-users"></i> Part time
+                    </p>
+                  </div>
+                  
+                  <a href="{% url 'job_details' %}" class="view-details">View Job Details</a>
+                </div>
+
+                <div class="job-card">
+                    <h3 class="job-title">
+                      Digital Marketer
+                    </h3>
+                    
+                    <div class="job-details">
+                      <p class="job-location">
+                        <i class="fas fa-map-marker-alt"></i> Riyadh
+                      </p>
+                      <p class="job-role">
+                        <i class="fas fa-briefcase"></i> Marketer
+                      </p>
+                      <p class="job-industry">
+                        <i class="fas fa-industry"></i> Marketing
+                      </p>
+                      <p class="job-status">
+                        <i class="fas fa-users"></i> Full time
+                      </p>
+                    </div>
+                    
+                    <a href="{% url 'job_details' %}" class="view-details">View Job Details</a>
+                  </div>
+                  
+                <!-- More job cards here -->
+              </div>
+              
+          </div>        
+</div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterToggles = document.querySelectorAll('.filter-toggle');
+  
+      filterToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+          const filterGroup = this.closest('.filter-group');
+          filterGroup.classList.toggle('open');
+        });
+      });
+    });
+  </script>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %} 
+
+<!-- Hero Section -->
+<section id="hero2" class="d-flex align-items-center">
+    <div class="image-background">
+        <img src="{% static 'img/section-copy15.jpg' %}">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
+                <br>
+                <br>
+                <h1>Mission, Vision, and Values</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Hero -->
+<br>
+<br>
+
+<!-- Mission, Vision, and Values Section -->
+<section id="mission-vision-values" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-up" style="padding-bottom: 0px; margin-bottom: 0px;">What Drives Us</h2>
+        <p class="section-description text-center" data-aos="fade-up" data-aos-delay="100">
+            Discover the core principles that guide our company: our mission, vision, and values.
+        </p>
+        <div class="row">
+            <!-- Card: Mission -->
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card card-expandable">
+                    <div class="card-header">
+                        <h3>Mission</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>To deliver exceptional solutions to our customers by providing innovative, sustainable, and reliable products</p>
+                        <div class="card-details">
+                            <p>We strive to exceed expectations by continuously enhancing quality, improving customer satisfaction, and fostering long-term partnerships. Innovation, integrity, and excellence are at the core of everything we do in our company.</p>
+                        </div>
+                        <div class="toggle-details">
+                          <span class="arrow-circle fas fa-chevron-down"></span>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card: Vision -->
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card card-expandable">
+                    <div class="card-header">
+                        <h3>Vision</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>To be a globally recognized leader in our industry, driving progress and sustainability for a brighter future.</p>
+                        <div class="card-details">
+                            <p>Our vision encompasses creating value for our stakeholders while contributing positively to the world. By leveraging technology, innovation, and teamwork, we aim to make a meaningful difference in people's lives.</p>
+                        </div>
+                        <div class="toggle-details">
+                          <span class="arrow-circle fas fa-chevron-down"></span>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card: Values -->
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="card card-expandable">
+                    <div class="card-header">
+                        <h3>Values</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Our values define who we are: integrity, innovation, sustainability, and customer-centricity.</p>
+                        <div class="card-details">
+                            <p>We uphold the highest standards of ethics and transparency. Sustainability guides our practices, ensuring a positive impact on the environment. We prioritize our customers’ needs to meet their expectations.</p>
+                        </div>
+                        <div class="toggle-details">
+                          <span class="arrow-circle fas fa-chevron-down"></span>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Mission, Vision, and Values Section -->
+
+{% endblock %}

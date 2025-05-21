@@ -1,0 +1,85 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %} 
+
+<div class="desktop-view-heritage">
+<section id="hero2" class="d-flex align-items-center ">
+    <div class="image-background" >
+    <img src="{% static 'img/slider-1-4.jpg' %}" >
+    </div>
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
+        <br>
+        <br>
+        <h1>Heritage</h1>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- End Hero -->
+<br>
+<br>
+<section id="timeline">
+<div class="container">
+    <!-- Row 1 -->
+    <div class="timeline-row">
+        <div class="timeline-card left-1">
+            <h3>Established in 2018</h3>
+            <p>Expanded customer base to over 2000 retails.</p>
+        </div>
+        <div class="timeline-middle">
+            <div class="timeline-logo">
+                <img src="{% static 'img/Logo-goldenmeat.png' %}" alt="Logo">
+                ➤
+            </div>
+            
+        </div>
+        <div class="timeline-card right-1">
+            <h3>Temperature-Controlled Warehouses</h3>
+            <p>Three branches with temperature-controlled storage.</p>
+        </div>
+    </div>
+
+      <!-- Row 2 -->
+      <div class="timeline-row">
+          <div class="timeline-card left">
+              <h3>Collaboration with 40+ Suppliers</h3>
+              <p>Working with globally established suppliers for quality assurance.</p>
+          </div>
+          <div class="timeline-middle">
+              <div class="timeline-logo-l">
+                  <img src="{% static 'img/Logo-goldenmeat.png' %}" alt="Logo">
+                  ➤
+              </div>
+          </div>
+          <div class="timeline-card right">
+              <h3>Market Leader in Saudi Arabia</h3>
+              <p>We have become one of the leading companies in the Kingdom’s meat sector in recent years.</p>
+          </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="timeline-row">
+          <div class="timeline-card left">
+              <h3>Part of AlBuraq Group</h3>
+              <p>Our experience makes us the ideal partner for the entire range of meat.</p>
+          </div>
+          <div class="timeline-middle">
+            <div class="timeline-logo">
+              <img src="{% static 'img/Logo-goldenmeat.png' %}" alt="Logo">
+              ➤
+          </div>
+          </div>
+          <div class="timeline-card right">
+              <h3>Future Expansion Plans</h3>
+              <p>Expanding product lines and global supplier collaborations.</p>
+          </div>
+      </div>
+  </div>
+</section>
+</div>
+{% include 'home/mobile/heritage.html' %}
+
+{% endblock %}

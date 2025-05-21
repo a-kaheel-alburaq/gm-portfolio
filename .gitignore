@@ -1,0 +1,53 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# SQLite DB (used only for local dev)
+db.sqlite3
+
+# Virtual environment
+env/
+venv/
+.venv/
+ENV/
+.Python
+
+# Environment variables
+.env
+*.env
+
+# Django static and media directories (optional, if generated dynamically)
+staticfiles/
+media/
+
+# Django migration caches
+**/migrations/__pycache__/
+**/*.pyc
+
+# VS Code project settings
+.vscode/
+
+# Pytest and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Django admin collectstatic output (if any)
+static_root/
+media_root/
+
+# Log files
+*.log
+
+# macOS / Windows system files
+.DS_Store
+Thumbs.db
+
+# Node.js stuff (if you ever integrate React/Vite etc.)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# settings 
+# goldenMeatPortfolio/settings.py

@@ -1,0 +1,87 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section id="hero2" class="d-flex align-items-center">
+    <div class="image-background">
+        <img src="{% static 'img/section-copy17.jpg' %}" alt="Company Background">
+    </div>
+    {% comment %} <div class="fade-overlay"></div> {% endcomment %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
+                <h1>Who We Are</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Hero -->
+
+<!-- Section: About Us -->
+<section id="about-us" class="about-us-section" style="padding-bottom: 0px; ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="section-title" style="padding-bottom: 0px; ">We Bring You the Best Meat from All Around the World</h2>
+                <p class="about-us-text">
+                    It all started from our passion and dedication for meat, and with a strong ambition to grow and to provide more added value with respect to our people’s love for premium quality meat.
+                    We began sourcing a wide range of fresh and frozen meat and poultry through a global network of experts and suppliers, including carefully selected slaughterhouses, cutting plants, packing, and processing companies.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section: Why GoldenMeat Co -->
+<section id="why-goldenmeat" class="why-goldenmeat-section" style="padding-top: 0px; ">
+    <div class="container">
+        <div class="row">
+            <!-- Premium Quality -->
+            <div class="col-12">
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="{% static 'img/whoweare/1.jpg' %}" alt="Premium Quality" class="img-fluid">
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Premium Quality</h3>
+                        <p class="feature-description">
+                            At GoldenMeat Co, fresh meat and fresh ideas are at the heart of food and services. GoldenMeat Co delivers exceptional produce, custom cuts of meat, and imported foods offering global flavors. Our network of specialty suppliers pairs well with our culinary and business expertise. GoldenMeat Co’s unparalleled selection of innovative ingredients and cutting-edge products connects your business to the industry-leading distribution network.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- High Standard Trading & Logistics -->
+            <div class="col-12">
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="{% static 'img/whoweare/2.jpg' %}" alt="High Standard Trading & Logistics" class="img-fluid">
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">High Standard Trading & Logistics</h3>
+                        <p class="feature-description">
+                            Using our extensive industry knowledge, together with our logistics partners, we have the transport service to match any of your requirements. Regardless of the way of transportation, we aim to deliver your frozen, chilled, and temperature-controlled goods always on time and in the best possible condition. All products we deliver are processed and packed in accordance with major global food standards.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Transparency and Trust -->
+            <div class="col-12">
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="{% static 'img/whoweare/3.jpg' %}" alt="Transparency and Trust" class="img-fluid">
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Transparency and Trust</h3>
+                        <p class="feature-description">
+                            Through our journey in the Kingdom of Saudi Arabia, the satisfaction of our customers and partners, rigor, and ongoing improvement have been central to our corporate culture.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

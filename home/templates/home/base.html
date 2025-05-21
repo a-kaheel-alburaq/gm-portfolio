@@ -1,0 +1,247 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Carousel Products icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Golden meat</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- Carousel Hero section -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Favicons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="{% static '/img/favicon.png' %}" rel="icon">
+    <link href="{% static '/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    {% comment %} <link href="https://fonts.cdnfonts.com/css/beauty-luxury" rel="stylesheet">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/beauty-luxury');
+    </style> {% endcomment %}
+    <!-- Vendor CSS Files -->
+    <link href="{% static '/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static '/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+    <link href="{% static '/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static '/vendor/venobox/venobox.css' %}" rel="stylesheet">
+    <link href="{% static '/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static '/vendor/aos/aos.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static '/css/style.css' %}"  type="text/css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Ninestars - v2.0.0
+  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container-fluid d-flex ">
+
+            <div class="logo mr-auto">
+                <a href=""><img src="{% static '/img/Logo-goldenmeat.png' %}" alt="" class="img-fluid" id="mobile-logo"></a>
+            </div>
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li class="drop-down"><a href="">About us</a>
+                        <ul>
+                            <li><a href="{% url 'about' %}">Who we are </a></li>
+                            <li><a href="{% url 'heritage' %}">Heritage</a></li>
+                            {% comment %} <li><a href="{% url 'team' %}">Team</a></li> {% endcomment %}
+                            <li><a href="{% url 'corporate-governance' %}">Corporate Governance</a></li>
+                            <li><a href="{% url 'vision-mission-values' %}">Vision & Mission & Values</a></li>
+            
+                        </ul>
+            <li><a href="{% url 'meats' %}">Products</a></li>
+            <li><a href="{% url 'branches' %}">Branches</a></li>
+            <li class="drop-down"><a href="">Commitments</a>
+                <ul>
+                    <li><a href="{% url 'sustainability' %}">Sustainability</a></li>
+                    <li><a href="{% url 'saudi-vision' %}">Saudi Vision 2030</a></li>
+                </ul>
+            </li>
+
+            <li class="drop-down"><a href="">Media</a>
+            <ul>
+                <li><a href="{% url 'photos-videos' %}">Photos & videos</a></li>
+                <li><a href="{% url 'news-insights' %}">News & insights</a></li>
+            </ul>
+        </li>
+
+        <li><a href="{% url 'careers' %}">Careers</a></li>
+        <li><a href="{% url 'vendor' %}">Vendor</a></li>
+        <li ><a href="{% url 'contact-info' %}">Contact us</a></li>
+        
+        
+                    <li class="get-started" style="display: flex; align-items: center; justify-content: center;"><a href="#about" style="font-weight: bold; transition: all 0.3s ease-out; " onmouseover="this.style.boxShadow='0 0 10px rgba(0,0,0,0.5)'" onmouseout="this.style.boxShadow='none'">Online store 🛒</a></li>
+                    
+                </ul>
+
+                
+                    
+            </nav><!-- .nav-menu -->
+
+        </div>
+
+    </header><!-- End Header -->
+
+        <main>
+        {% block content %}{% endblock %}
+        </main>
+<!-- ======= Footer ======= -->
+<footer id="footer">
+
+    <div class="footer-newsletter">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h4>Join Our Newsletter</h4>
+                    <form action="" method="post">
+                        <input type="email" name="email" placeholder="Enter your email address"><input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>Golden Meat</h3>
+                    <p>
+                        Riyadh Development Centre,<br>
+                        King Fahd Road, 12671 Riyadh 2729<br>
+                        Saudi Arabia <br><br>
+                        <strong>Phone:</strong> +966114133338<br>
+                        <strong>Email:</strong> info@goldenmeat.com.sa<br>
+                        <strong>C.R:</strong> 1010929656<br>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="about">About us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Download Our App</h4>
+                    <div class="app-links">
+                        <a >
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+                        </a>
+                        <a  >
+                            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+                        </a>
+                        <a  >
+                            <img src="{% static 'img/icons/app-huawei-uk.svg' %}" alt="Huawei AppGallery">
+
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Social Networks</h4>
+                    <p>Follow us on social media</p>
+                    <div class="social-links mt-3">
+                        <a href="https://x.com/goldenmeatksa" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
+                        <a href="https://www.facebook.com/Goldenmeatsa1/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+                        <a href="https://www.instagram.com/goldenmeatsa/" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/golden-meat-international-company/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                        <a href="https://www.tiktok.com/@goldenmeatsa" class="tiktok" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-4">
+        <div class="copyright">
+            &copy; Copyright <strong><span>Golden Meat International Co</span></strong>. All Rights Reserved
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+<!-- <div class="credits"> -->
+
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+            <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+
+            <!-- </div>
+    </div> -->
+<!-- End Footer -->
+
+    {% comment %} <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>  {% endcomment %}
+
+    <!-- Vendor JS Files -->
+    <script src="{% static '/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static '/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static '/vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static '/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static '/vendor/venobox/venobox.min.js' %}"></script>
+    <script src="{% static '/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static '/vendor/aos/aos.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static '/js/main.js' %}"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const logo = document.getElementById('mobile-logo');
+          console.log(logo);  // Logs the logo element for debugging
+      
+          function isMobile() {
+            return window.innerWidth <= 767;
+          }
+      
+          window.addEventListener('scroll', function () {
+            if (isMobile()) {
+              if (window.scrollY > 20) {
+                logo.classList.add('shrink');
+              } else {
+                logo.classList.remove('shrink');
+              }
+            }
+          });
+        });
+      </script>
+      
+
+      
+    
+</body>
+
+</html> 

@@ -1,0 +1,84 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %}
+<section id="hero2" class="d-flex align-items-center">
+    <div class="image-background">
+        <img src="{% static 'img/section-copy9.jpg' %}">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
+                <br>
+                <br>
+                <h1>News</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Hero -->
+<br>
+<br>
+
+<!-- News Section -->
+<section id="news" class="news-section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">News & Insight</h2>
+        <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="owl-carousel news-carousel">
+                {% comment %} <div class=""> {% endcomment %}
+                    <!-- News Card 1 -->
+                    {% comment %} <div class="col-12 col-md-4 col-lg-4"> {% endcomment %}
+                        <div class="news-card">
+                            <img src="{% static 'img/news/news-1.jpg' %}" class="img-fluid" alt="News 1">
+                            <div class="news-content">
+                                <h3>Saudi Food Exhibition</h3>
+                                <p>Golden Meat international co participates in Saudi Food Exhibition</p>
+                                {% comment %} <a href="#" class="read-more">Read More</a> {% endcomment %}
+                            </div>
+                        </div>
+                        {% comment %}
+                    </div> {% endcomment %}
+                    {% comment %}
+                </div> {% endcomment %}
+                {% comment %} <div class=""> {% endcomment %}
+                    <!-- News Card 2 -->
+                    {% comment %} <div class="col-12 col-md-4 col-lg-4"> {% endcomment %}
+                        <div class="news-card">
+                            <img src="{% static 'img/news/news-2.jpg' %}" class="img-fluid" alt="News 2">
+                            <div class="news-content">
+                                <h3>Horica Exhibition</h3>
+                                <p>Horica Exhibition , Golden Meat international co </p>
+                                {% comment %} <a href="#" class="read-more">Read More</a> {% endcomment %}
+                            </div>
+                        </div>
+                        {% comment %}
+                    </div> {% endcomment %}
+                    {% comment %}
+                </div> {% endcomment %}
+
+                {% comment %} <div class=""> {% endcomment %}
+                    <!-- News Card 3 -->
+                    {% comment %} <div class="col-12 col-md-4 col-lg-4 center-on-tablet"> {% endcomment %}
+                        <div class="news-card">
+                            <img src="{% static 'img/news/news-3.png' %}" class="img-fluid" alt="News 3">
+                            <div class="news-content">
+                                <h3>New certificate</h3>
+                                <p>New certificate in quaility for Golden Meat international co</p>
+                                {% comment %} <a href="#" class="read-more">Read More</a> {% endcomment %}
+                            </div>
+                            {% comment %}
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+                {% comment %} </div> {% endcomment %}
+        </div>
+        <div class="more-about-btn">
+            <a href="{% url 'news-insights' %}" class="btn-more-about">More News About Us</a>
+        </div>
+    </div>
+</section>
+<!-- End News Section -->
+
+{% endblock %}

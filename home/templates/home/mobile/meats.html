@@ -1,0 +1,342 @@
+{% load static %}
+<section id="portfolio" class="portfolio-mobile">
+    <div class="container first-filter">
+
+        {% comment %} <div class="section-title" data-aos="fade-up">
+            <h2>Products</h2>
+            <p>Check out our products</p>
+        </div> {% endcomment %}
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+        </div>
+        <span class="icon-span">
+            <div class="">
+                <div class="horizontal-scroll-wrapper">
+                <ul id="portfolio-flters1-mobile">
+                        {% comment %} <a href="{% url 'meats' %}"> {% endcomment %}
+                        <li>
+                            <a href="#">
+                                <div class="icon-container">
+                                    <img src="{% static 'img/icons/all.svg' %}" class="filter-icon"
+                                        alt="All Icon" />
+                                    <p>All</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                        <a href="{% url 'meats' %}">
+                                <div class="icon-container">
+                                    <img src="{% static 'img/icons/2.svg' %}" class="filter-icon meat-icon"
+                                        alt="All Icon" />
+                                    <p style="color:  #fdb417;">Meat</p>
+                                </div>
+                            </a>
+                            </li>
+
+                        {% comment %} <a href="{% url 'dairy' %}"> {% endcomment %}
+                            <li>
+                            <a href="#">
+                                    <div class="icon-container">
+                                        <img src="{% static 'img/icons/Dairy.svg' %}" class="filter-icon"
+                                            alt="All Icon" />
+                                        <p>Dairy</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                        {% comment %} <a href="{% url 'oils' %}"> {% endcomment %}
+                            <li>
+                                    <a href="#">
+                                    <div class="icon-container">
+                                        <img src="{% static 'img/icons/oils2.svg' %}" class="filter-icon"
+                                            alt="All Icon" />
+                                        <p>Oils</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                        {% comment %} <a href="{% url 'others' %}"> {% endcomment %}
+                            <li>
+                                    <a href="#">
+                                    <div class="icon-container">
+                                        <img src="{% static 'img/icons/others.svg' %}" class="filter-icon"
+                                            alt="All Icon" />
+                                        <p>Others</p>
+                                    </div>
+                                </a>
+                            </li>
+                </ul>
+                </div>
+            </div>
+    </div>
+</section>
+{% comment %} <div class="section-title" data-aos="fade-up">
+    <p>Check out our diverse products</p>
+</div>
+{% endcomment %}
+            <div class="row inner-filter">
+                <div>
+
+        <div class="horizontal-scroll-wrapper">
+        <ul id="portfolio-flters-mobile">
+            <li data-filter="*">
+                <div class="icon-container">
+                    <img src="{% static 'img/icons/all.svg' %}" class="filter-icon" alt="All Icon" />
+                </div>
+                <p>All</p>
+            </li>
+            <li data-filter=".filter-beef" class="filter-active">
+                <div class="icon-container">
+                    <img src="{% static 'img/icons/beef-meat.svg' %}" class="filter-icon" alt="Beef Meat Icon" />
+                </div>
+                <p>Beef Meat</p>
+            </li>
+            <li data-filter=".filter-dairy">
+                <div class="icon-container">
+                    <img src="{% static 'img/icons/lamb-meat.svg' %}" class="filter-icon" alt="Lamb Meat Icon" />
+                </div>
+                <p>Lamb Meat</p>
+            </li>
+            <li data-filter=".filter-VF">
+                <div class="icon-container">
+                    <img src="{% static 'img/icons/goat.svg' %}" class="filter-icon" alt="Goat Icon" />
+                </div>
+                <p>Goat</p>
+            </li>
+            <li data-filter=".filter-oils">
+                <div class="icon-container">
+                    <img src="{% static 'img/icons/chicken.svg' %}" class="filter-icon" alt="Chicken Icon" />
+                </div>
+                <p>Chicken</p>
+            </li>
+            <li data-filter=".filter-others">
+                <div class="icon-container">
+                    <img src="{% static 'img/icons/duck.svg' %}" class="filter-icon" alt="Duck Icon" />
+                </div>
+                <p>Duck</p>
+            </li>
+            <li data-filter=".filter-others">
+                <div class="icon-container">
+                    <img src="{% static 'img/icons/ostrich.svg' %}" class="filter-icon" alt="Ostrich Icon" />
+                </div>
+                <p>Ostrich</p>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </div>
+</div>
+<section id="portfolio" class="portfolio col-lg-12">
+    <div class="container">
+        
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/gallery/gallery-1-1.jpg' %}" class="img-fluid" alt="">
+                    <div class="portfolio-links">
+                        <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>BEEF</h4>
+                        <p>SIRLOIN</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/gallery/gallery-1-2.jpg' %}" class="img-fluid" alt="">
+                    <div class="portfolio-links">
+                        <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>BEEF</h4>
+                        <p>TOP TENDER STEAK</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/gallery/gallery-1-3.jpg' %}" class="img-fluid" alt="">
+                    <div class="portfolio-links">
+
+                        <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>BEEF</h4>
+                        <p>PORTERHOUSE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/gallery/gallery-1-4.jpg' %}" class="img-fluid" alt="">
+                    <div class="portfolio-links">
+
+                        <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>BEEF</h4>
+                        <p>TENDERLOIN</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/gallery/gallery-1-5.jpg' %}" class="img-fluid" alt="">
+                    <div class="portfolio-links">
+
+                        <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>BEEF</h4>
+                        <p>TOMAHAWK</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/gallery/gallery-1-6.jpg' %}" class="img-fluid" alt="">
+                    <div class="portfolio-links">
+
+                        <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>BEEF</h4>
+                        <p>RIB EYE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/gallery/gallery-1-7.jpg' %}" class="img-fluid" alt="">
+                    <div class="portfolio-links">
+
+                        <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>BEEF</h4>
+                        <p>FLANK STEAK</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/gallery/gallery-1-8.jpg' %}" class="img-fluid" alt="">
+                    <div class="portfolio-links">
+
+                        <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>BEEF</h4>
+                        <p>T-BONE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/gallery/gallery-1-9.jpg' %}" class="img-fluid" alt="">
+                    <div class="portfolio-links">
+
+                        <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>BEEF</h4>
+                        <p>RUMP STEAK</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+
+    .icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.horizontal-scroll-wrapper {
+    max-width: 92%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 auto;
+    display: block;
+}
+
+.horizontal-scroll-wrapper li {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    text-align: center;
+
+}
+
+.horizontal-scroll-wrapper ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0 16px; 
+    scroll-padding-left: 16px;
+}
+
+/* Optional: Space items better */
+.horizontal-scroll-wrapper .icon-span {
+  margin-right: 10px;
+}
+
+.horizontal-scroll-wrapper a {
+  text-decoration: none;
+}
+.container.first-filter {  
+  max-width: 100%;  
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+#portfolio-flters-mobile li {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#portfolio-flters-mobile li p {
+    margin-top: 8px;
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+ /* Hide mobile version on desktop */
+    @media screen and (min-width: 768px) {
+        .portfolio-mobile,
+        #portfolio-flters-mobile,
+        .portfolio-mobile * {
+            display: none !important;
+        }
+    }
+
+    /* Show mobile version only on mobile devices */
+    @media screen and (max-width: 767px) {
+        .portfolio-mobile {
+            display: block;
+        }
+    }
+
+
+</style>

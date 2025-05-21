@@ -1,0 +1,105 @@
+{% load static %}
+<div id="video-modal-tablet" class="video-modal">
+  <div class="modal-content">
+    <button id="close-video-tablet" class="close-btn">X</button>
+      <video
+      id="internal-video-tablet"
+      width="100%" controls>
+      <source src="{% static 'videos/sample.mp4' %}" type="video/mp4">
+    </video>
+
+  </div>
+</div>
+<div class="tablet-view">
+<section id="custom-section" class=" align-items-center py-5 " >
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Side (Image with Border, Video Button, and Overlay Image) -->
+        <div class="video-section-wrapper d-flex justify-content-center align-items-center position-relative">
+          <!-- Left Overlay -->
+          <img src="{% static 'img/overlay-image.png' %}" class="overlay-image-tablet left-overlay" alt="Overlay Image">
+        
+          <!-- Video Play Button -->
+          <button id="play-video-tablet" class="video-button-centered">
+            <img src="{% static 'img/icons/play.svg' %}" alt="Play Video" style="width: 60px; height: 60px;">
+          </button>
+        
+          <!-- Right Overlay -->
+          <img src="{% static 'img/overlay-image.png' %}" class="overlay-image-tablet right-overlay" alt="Overlay Image">
+        
+          <!-- Video Modal -->
+          
+        </div>
+        
+  
+        
+  <!-- Right Side (Text Content) -->
+  <div class="col-lg-6 me-n3" style="margin-top:50px  ">
+  <div>
+    <h3 class="mb-3" style="color: #fdb417;  text-transform: uppercase;">About Golden Meat</h3>
+  </div>
+  <br>
+    <h1 class="mb-4" style="color: #fdb417; font-weight: bold; text-transform: uppercase;">We Provide Best Meat</h1>
+    <p class="mb-6" style="text-align: justify;" >
+      We are trusted by many clients from all over the country. Golden Meat International Company imports, markets, and distributes frozen, chilled, fresh meat and others in Saudi Arabia. Since its establishment in 2018, the company has expanded its customer base to over 2000 retail, food service, and wholesale establishments. It runs three branches, each of which has a warehouse with temperature control. Golden Meat International Company works with more than 40 suppliers, the majority of whom are well-known on a global scale and have established market existence worldwide.
+    </p>
+  
+    <h4 style="color: #fdb417; font-weight: bold; text-transform: uppercase;">    Raw Meat Production by Leading Farm <h4>
+      <br>
+      <div class="checklist-section container-fluid py-6">
+        <div class="checklist row">
+          <!-- Row 1 -->
+          <div class="check-item col-md-4 mb-3" style="padding-left: 0px;">
+            <img src="{% static 'img/icons/check-circle.svg' %}"  alt="Checkmark" class="me-2" style="width: 20px; height: 20px; color: #fdb417; ">
+            PREMIUM CUTS
+          </div>
+          <div class="check-item col-md-4 mb-3" style="padding-left: 0px;">
+            <img src="{% static 'img/icons/check-circle.svg' %}"  alt="Checkmark" class="me-2" style="width: 20px; height: 20px; color: #fdb417;">
+            PREMIUM QUALITY
+          </div>
+          <div class="check-item col-md-4 mb-3" style="padding-left: 0px; padding-right: 0px;">
+            <img src="{% static 'img/icons/check-circle.svg' %}"  alt="Checkmark" class="me-2" style="width: 20px; height: 20px; color: #fdb417;">
+            CUSTOM BUTCHERING 
+          </div>
+        </div>
+      
+        <div class="checklist row">
+          <!-- Row 2 -->
+          <div class="check-item col-md-4 mb-3" style="padding-left: 0px; word-wrap: break-word; white-space: normal;">
+            <img src="{% static 'img/icons/check-circle.svg' %}"  alt="Checkmark" class="me-2" style="width: 20px; height: 20px; color: #fdb417;">
+            FRESHNESS
+          </div>
+          <div class="check-item col-md-4 mb-3" style="padding-left: 0px;">
+            <img src="{% static 'img/icons/check-circle.svg' %}"  alt="Checkmark" class="me-2" style="width: 20px; height: 20px; color: #fdb417;">
+            TRANSPARENCY AND TRUST
+          </div>
+          <div class="check-item col-md-4 mb-3" style="padding-left: 0px;">
+            <img src="{% static 'img/icons/check-circle.svg' %}" alt="Checkmark" class="me-2" style="width: 20px; height: 20px; color: #fdb417;">
+            HIGH STANDARD TRADING & LOGISTICS
+          </div>
+        </div>
+      </div>
+      
+  <br>
+  <br>
+  <div class="action-buttons d-flex align-items-center">
+    <a href="{% url 'about' %}" class="btn custom-primary liquid me-3">
+      <img src="{% static 'img/icons/meat.png' %}"  alt="icon" class="button-icon ">
+      More about us</a>
+    <a href="tel:+966112631842" class=" custom-secondary liquid me-2 fa fa-phone ">
+      <i class="bi bi-telephone-fill"></i>
+    </a>
+    <div class="contact-info  ">
+      <span class="call-us-text">Call us</span>
+      <strong class="phone-number">+966112631842</strong>
+    </div>
+  </div>
+  
+  
+  </div>
+  
+        </div>
+      </div>
+      
+    </section>
+  </div>

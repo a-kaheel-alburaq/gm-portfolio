@@ -1,0 +1,133 @@
+<section id="portfolio" class="portfolio">
+    <div class="container first-filter">
+
+        {% comment %} <div class="section-title" data-aos="fade-up">
+            <h2>Products</h2>
+            <p>Check out our products</p>
+        </div> {% endcomment %}
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+        </div>
+        <span class="icon-span">
+            <div class="col-lg-9">
+                <ul id="portfolio-flters1">
+                    <span class="icon-span">
+                        {% comment %} <a href="{% url 'meats' %}"> {% endcomment %}
+                            <a href="#">
+                                <li>
+                                    <div class="icon-container">
+                                        <img src="{% static 'img/icons/all.svg' %}" class="filter-icon"
+                                            alt="All Icon" />
+                                        <p>All</p>
+                                    </div>
+                                </li>
+                            </a>
+                    </span>
+
+                    <span class="icon-span">
+                        <a href="{% url 'meats' %}">
+                            <li>
+                                <div class="icon-container">
+                                    <img src="{% static 'img/icons/2.svg' %}" class="filter-icon meat-icon"
+                                        alt="All Icon" />
+                                    <p style="color:  #fdb417;">Meat</p>
+                                </div>
+                            </li>
+                        </a>
+                    </span>
+
+                    <span class="icon-span">
+                        {% comment %} <a href="{% url 'dairy' %}"> {% endcomment %}
+                            <a href="#">
+                                <li>
+                                    <div class="icon-container">
+                                        <img src="{% static 'img/icons/Dairy.svg' %}" class="filter-icon"
+                                            alt="All Icon" />
+                                        <p>Dairy</p>
+                                    </div>
+                                </li>
+                            </a>
+                    </span>
+
+                    <span class="icon-span">
+                        {% comment %} <a href="{% url 'oils' %}"> {% endcomment %}
+                            <a href="#">
+                                <li>
+                                    <div class="icon-container">
+                                        <img src="{% static 'img/icons/oils2.svg' %}" class="filter-icon"
+                                            alt="All Icon" />
+                                        <p>Oils</p>
+                                    </div>
+                                </li>
+                            </a>
+                    </span>
+
+                    <span class="icon-span">
+                        {% comment %} <a href="{% url 'others' %}"> {% endcomment %}
+                            <a href="#">
+                                <li>
+                                    <div class="icon-container">
+                                        <img src="{% static 'img/icons/others.svg' %}" class="filter-icon"
+                                            alt="All Icon" />
+                                        <p>Others</p>
+                                    </div>
+                                </li>
+                            </a>
+                    </span>
+                </ul>
+            </div>
+    </div>
+</section>
+{% comment %} <div class="section-title" data-aos="fade-up">
+    <p>Check out our diverse products</p>
+</div>
+{% endcomment %}
+<div class="row inner-filter">
+    <div>
+        <ul id="portfolio-flters">
+            <li data-filter="*">
+                <div class="icon-container">
+                    <img src="{% static 'img/icons/all.svg' %}" class="filter-icon" alt="All Icon" />
+                </div>
+                <p>All</p>
+            </li>
+            <li data-filter=".filter-beef" class="filter-active">
+                <div class="icon-container">
+                    <img src="{% static 'img/icons/beef-meat.svg' %}" class="filter-icon" alt="Beef Meat Icon" />
+                </div>
+                <p>Beef Meat</p>
+            </li>
+            <li data-filter=".filter-dairy">
+                <div class="icon-container">
+                    <img src="{% static 'img/icons/lamb-meat.svg' %}" class="filter-icon" alt="Lamb Meat Icon" />
+                </div>
+                <p>Lamb Meat</p>
+            </li>
+            <li data-filter=".filter-VF">
+                <div class="icon-container">
+                    <img src="{% static 'img/icons/goat.svg' %}" class="filter-icon" alt="Goat Icon" />
+                </div>
+                <p>Goat</p>
+            </li>
+            <li data-filter=".filter-oils">
+                <div class="icon-container">
+                    <img src="{% static 'img/icons/chicken.svg' %}" class="filter-icon" alt="Chicken Icon" />
+                </div>
+                <p>Chicken</p>
+            </li>
+            <li data-filter=".filter-others">
+                <div class="icon-container">
+                    <img src="{% static 'img/icons/duck.svg' %}" class="filter-icon" alt="Duck Icon" />
+                </div>
+                <p>Duck</p>
+            </li>
+            <li data-filter=".filter-others">
+                <div class="icon-container">
+                    <img src="{% static 'img/icons/ostrich.svg' %}" class="filter-icon" alt="Ostrich Icon" />
+                </div>
+                <p>Ostrich</p>
+            </li>
+        </ul>
+    </div>
+</div>

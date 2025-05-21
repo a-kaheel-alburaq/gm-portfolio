@@ -1,0 +1,78 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %} 
+<div class="corporate-governance-page">
+  <section id="hero2" class="d-flex align-items-center">
+    <div class="image-background">
+      <img src="{% static 'img/section-copy16.jpg' %}" />
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
+          <br />
+          <br />
+          <h1>Corporate Governance</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero -->
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <section class="governance-section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <i class="fas fa-users"></i>
+        <h2 class="section-title">Governance Structure</h2>
+      </div>
+      <p class="governance-description">
+        Our governance structure is designed to uphold the principles of transparency, accountability, and responsibility. 
+        We ensure that our management practices align with the highest ethical standards and meet global regulatory requirements.
+      </p>
+    </div>
+  </section>
+
+  <section class="governance-structure-section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <i class="fas fa-cogs"></i>
+        <h2 class="section-title">Corporate Policies</h2>
+      </div>
+      <p class="governance-description">
+        We adhere to well-defined corporate policies that guide our operational practices, decision-making processes, and risk management. 
+        These policies ensure the protection of shareholder value and the sustainability of our business.
+      </p>
+    </div>
+  </section>
+
+  <section class="code-of-conduct-section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <i class="fas fa-handshake"></i>
+        <h2 class="section-title">Code of Conduct</h2>
+      </div>
+      <p class="governance-description">
+        At GoldenMeat Co., we maintain a strict code of conduct to ensure the highest standards of ethical behavior in all aspects of our operations. 
+        Our code promotes integrity, honesty, and respect in all our business dealings.
+      </p>
+    </div>
+  </section>
+
+  <section class="compliance-risk-section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <i class="fas fa-shield-alt"></i>
+        <h2 class="section-title">Compliance and Risk Management</h2>
+      </div>
+      <p class="governance-description">
+        We have a robust compliance and risk management framework that helps mitigate risks and ensures that we operate in accordance with local and international laws and regulations.
+      </p>
+    </div>
+  </section>
+</div>
+{% endblock %}

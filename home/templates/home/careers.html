@@ -1,0 +1,329 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %}
+<br><br><br><br><br>
+
+<section id="careers" class="careers section-bg">
+  <div class="container">
+    <div class="career-cards-wrapper">
+      <div class="cv-modal-wrapper">
+      <!-- CV Upload Modal (Single Instance) -->
+  <div id="cvModal" class="cv-modal">
+  <div class="modal-content-cv">
+    <span class="close">&times;</span>
+    <h2>Upload Your CV</h2>
+    
+    <form id="cvForm"  class="modal-form">
+      <br>
+      
+      <label for="cvFile">Upload PDF CV (less than 5 MB)*:</label>
+      <input type="file" id="cvFile" accept=".pdf" required />
+      <p id="fileError" class="error-message" style="display: none;">Only PDF files up to 5MB are allowed.</p>
+
+      <br><br>
+      <label for="cvMessage">Message (Optional):</label>
+      <textarea id="cvMessage" rows="6" maxlength="1000" placeholder="Write a short message (max 1,000 characters)"></textarea>
+      <p id="textError" class="error-message" style="display: none;">Message must be ≤200 words and **must not contain links**.</p>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+  </div>
+
+  <!-- Send CV Card -->
+  <button class="career-card cv-card" id="openModal">
+    <div class="cv-icon-container">
+      <i class="fas fa-file-upload"></i>
+    </div>
+    <p class="cv-description">Send your CV</p>
+  </button>
+
+
+
+
+      <!-- Searching Job Card -->
+        <button class="career-card cv-card">
+      <a href="{% url 'job_list' %}" >
+        <div class="cv-icon-container">
+          <i class="fas fa-search"></i>
+        </div>
+        <p class="cv-description">Search a Job</p>
+        <!-- Arrow circle only appears on hover -->
+        
+      </a>
+    </button>
+    </div>
+
+{% include 'home/tablet/careers.html' %}
+{% include 'home/mobile/careers.html' %}
+<div class="desktop-careers-2lines-carousel">
+    <div class="owl-carousel " id="careers-carousel-2lines">
+      <!-- Slide 1 -->
+      <div class="career-group">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="career-group">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="career-group">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="career-group">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+          <div class="col-lg-4">
+            <div class="career-card">
+                <h4>Software Engineer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                <p><i class="fas fa-briefcase"></i> Full Time</p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+</div>
+    <!-- More Jobs Button -->
+    <div class="more-about-btn">
+      <a href="{% url 'job_list' %}"  class="btn-more-about">All jobs</a>
+    </div>
+
+  </div>
+</section>
+
+{% comment %} <a class="twitter-timeline" data-width="400" data-height="600" data-theme="light"
+   href="https://twitter.com/xraykh_"></a> 
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> {% endcomment %}
+
+
+<script>
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("cvModal");
+    const openModalBtn = document.getElementById("openModal");
+    const closeModalBtn = modal.querySelector(".close");
+    const modalWrapper = document.querySelector(".cv-modal-wrapper");
+  
+    // Open modal when clicking "Send your CV"
+    openModalBtn.addEventListener("click", function () {
+      modal.style.display = "block";
+      modalWrapper.style.display = "flex";  // Make sure overlay is visible
+    });
+  
+    // Close modal when clicking the close button
+    closeModalBtn.addEventListener("click", function () {
+      modal.style.display = "none";
+      modalWrapper.style.display = "none";  // Hide the overlay as well
+    });
+  
+    // Close modal when clicking outside the modal content
+    window.addEventListener("click", function (event) {
+      if (event.target === modalWrapper) {
+        modal.style.display = "none";
+        modalWrapper.style.display = "none";  // Hide the overlay
+      }
+    });
+  });
+  
+
+</script>
+
+  
+{% endblock %}

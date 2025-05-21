@@ -1,0 +1,196 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %} 
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<section id="portfolio" class="portfolio">
+  <div class="container">
+
+    {% comment %} <div class="section-title" data-aos="fade-up">
+      <h2>Products</h2>
+      <p>Check out our products</p>
+    </div> {% endcomment %}
+
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-12">
+        <ul id="portfolio-flters1">
+          <a href="{% url 'meats' %}"  >Meats</a>
+          <a href="{% url 'dairy' %}" >Dairy</a>
+          <a href="{% url 'vegitable-fruits' %}" class="filter-active">Vegitable & Fruits</a>
+          <a href="{% url 'oils' %}">Oils</a>
+          <a href="{% url 'others' %}">Others</a>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  
+  
+  <section id="portfolio" class="portfolio">
+      <div class="container">
+  
+        {% comment %} <div class="section-title" data-aos="fade-up">
+          <p>Check out our diverse products</p>
+        </div>
+   {% endcomment %}
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-meats">Meats</li>
+              <li data-filter=".filter-dairy">Dairy</li>
+              <li data-filter=".filter-VF">Vegitable & Fruits</li>
+              <li data-filter=".filter-oils">Oils</li>
+              <li data-filter=".filter-others">Others</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+  
+          <div class="col-lg-4 col-md-6 portfolio-item filter-meats">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/lamb.jpeg' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/lamb.jpeg' %}" data-gall="portfolioGallery" class="venobox" title="Zoom"><i
+                    class="icofont-plus-circle"></i></a>
+                <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>Meat</h4>
+                <p>Lamb meat</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-meats">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/beef.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/beef.png' %}" data-gall="portfolioGallery" class="venobox" title="Zoom"><i
+                    class="icofont-plus-circle"></i></a>
+                <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>Meat</h4>
+                <p>beef</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-dairy">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/Dairy.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/Dairy.jpg' %}" Data-gall="portfolioGallery" class="venobox" title="Zoom"><i
+                    class="icofont-plus-circle"></i></a>
+                <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>Dairy</h4>
+                <p>Dairy products</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-4 col-md-6 portfolio-item filter-oils">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/oils.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/oils.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Web 3"><i
+                    class="icofont-plus-circle"></i></a>
+                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>Olive Oils</h4>
+                <p>Oils</p>
+              </div>
+            </div>
+          </div>
+  
+  
+  
+          <div class="col-lg-4 col-md-6 portfolio-item filter-VF">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/vf.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/vf.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Card 2"><i
+                    class="icofont-plus-circle"></i></a>
+                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>Vegitable & Fruits</h4>
+                <p>Vegitable & Fruits</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-4 col-md-6 portfolio-item filter-oils">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/oils.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/oils.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Web 3"><i
+                    class="icofont-plus-circle"></i></a>
+                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>Olive Oils</h4>
+                <p>Oils</p>
+              </div>
+            </div>
+          </div>
+  
+  
+  
+          <div class="col-lg-4 col-md-6 portfolio-item filter-VF">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/vf.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/vf.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Card 2"><i
+                    class="icofont-plus-circle"></i></a>
+                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>Vegitable & Fruits</h4>
+                <p>Vegitable & Fruits</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-4 col-md-6 portfolio-item filter-VF">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/vf.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/vf.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Card 2"><i
+                    class="icofont-plus-circle"></i></a>
+                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>Vegitable & Fruits</h4>
+                <p>Vegitable & Fruits</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-4 col-md-6 portfolio-item filter-oils">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/oils.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/oils.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Web 3"><i
+                    class="icofont-plus-circle"></i></a>
+                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>Olive Oils</h4>
+                <p>Oils</p>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+    </section><!-- End Portfolio Section -->
+
+{% endblock %}

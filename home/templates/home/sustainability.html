@@ -1,0 +1,253 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %} 
+
+<!-- Hero Section -->
+<section id="hero2" class="d-flex align-items-center">
+    <div class="image-background">
+        <img src="{% static 'img/section-copy14.jpg' %}">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
+                <br>
+                <br>
+                <h1>Sustainability</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Hero -->
+<br>
+<br>
+<!-- Unique Sustainability Section -->
+<section id="unique-sustainability" class="custom-sustainability">
+    <div class="custom-container">
+        <h2 class="custom-title" data-aos="fade-up">Our Sustainability Goals</h2>
+        <p class="custom-description" data-aos="fade-up" data-aos-delay="100">
+            We are committed to building a sustainable future by focusing on eco-friendly practices, reducing our carbon footprint, and making a positive impact on our community and the planet.
+        </p>
+
+        <!-- Goal 1 -->
+        <div class="custom-row custom-goal move-left" data-aos="fade-up" data-aos-delay="200">
+            <div class="custom-col-left">
+                <img src="{% static 'img/sustainability/goal-1.png' %}" class="custom-img" alt="Goal 1">
+            </div>
+            <div class="custom-col-right">
+                <h3>Planet</h3>
+                <p>At GoldenMeat, our business is intrinsically linked with nature and agriculture. Climate change is one of the most significant issues that will impact the long-term prosperity of the industry and way of life. It impacts natural cycles of water, soils, biodiversity and ecosystems that play a vital role in the production of our food. Together with our employees, suppliers, customers and community, we are relentlessly pursuing new improved ways of reducing the environmental, social, and economic impacts on natural resources.</p>
+            </div>
+        </div>
+        
+
+        <!-- Goal 2 -->
+<div class="custom-row custom-goal move-right" data-aos="fade-up" data-aos-delay="300">
+    <div class="custom-col-right">
+        <h3>Animal Care</h3>
+        <p>The meat industry is a major player in the private sector and a great contributor to our kingdom’s economy. From production to processing and distribution, many people rely on the industry for their livelihood. Thus, we cannot ignore sustainability. We go ahead of the grid to ensure that we observe the best practices, from rearing the animals to packaging ready products.</p>
+    </div>
+    <div class="custom-col-left">
+        <img src="{% static 'img/sustainability/goal-3.png' %}" class="custom-img2" alt="Goal 2">
+    </div>
+</div>
+
+
+        <!-- Goal 3 -->
+        <div class="custom-row custom-goal move-left" data-aos="fade-up" data-aos-delay="400">
+            <div class="custom-col-left">
+                <img src="{% static 'img/sustainability/4-2.png' %}" class="custom-img" alt="Goal 3">
+            </div>
+            <div class="custom-col-right">
+                <h3>Product</h3>
+                <p>GoldenMeat beef passes stringent quality inspections before reaching your table. The kingdom’s meat industry protects its reputation for producing clean, green, and Halal red meat products with various traceability and quality assurance programs. These include numerous legislative requirements and industry standards at processors and inspections by importing authorities. We work with only the best distributors and suppliers to ensure GoldenMeat beef is of the same premium quality in every country.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Unique CSS -->
+
+<style>
+    .move-right {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    .custom-sustainability {
+        padding: 60px 0;
+    }
+    .custom-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .custom-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        
+    }
+    .custom-description {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+    .custom-row {
+        display: flex;
+        align-items: left;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        gap: 10px; /* Adjust spacing between image and text */
+        text-align: justify;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
+    .custom-col-left {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end; /* Align image to the right */
+    }
+    .custom-col-right {
+        flex: 1;
+        padding-left: 0; /* Remove extra space */
+        margin-left: 0; /* Remove negative margin */
+        font-size: 1.5rem;
+    }
+    .custom-img {
+        width: 40%; 
+        max-width: 40%; 
+        height: auto;
+        border-radius: 10px; /* Add rounded corners */
+
+    }
+    .custom-img2 {
+        max-width: 48%; 
+        height: auto;
+        border-radius: 10px; /* Add rounded corners */
+
+    }
+    
+    .move-left .custom-img {
+        flex-basis: 300px; /* Set a fixed width for the image container */
+        flex-grow: 0; /* Prevent the container from growing */
+        flex-shrink: 0; /* Prevent the container from shrinking */
+
+    }
+    
+    .move-left {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: -300px; /* Adjust the value as needed */
+        }
+
+    .custom-sustainability-goal {
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    
+    .custom-sustainability-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    }
+    
+    .custom-section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 3rem;
+    font-weight: bold;
+    }
+    
+    .custom-section-description {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+    .custom-sustainability-goal h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    }
+    
+    .custom-sustainability-goal p {
+    font-size: 1.274rem;
+    color: #666;
+    }
+    
+    /* Adjust planet & product images position */
+    .custom-planet, .custom-product {
+    margin-left: -30px;
+    }
+    
+/* ===== Mobile & Tablet Responsive ===== */
+@media (max-width: 1190px) {
+    .custom-row {
+        padding-right: 20px;
+    }
+    .move-right, .move-left {
+        margin: 0;
+    }
+    .custom-col-left, .custom-col-right {
+        padding: 0;
+        margin: 0;
+    }
+    .custom-img, .custom-img2 {
+        max-width: 300px;
+        margin: 0 auto 20px auto;
+    }
+    .custom-title {
+        font-size: 1.8rem;
+    }
+    .custom-description {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    .custom-col-right h3 {
+        font-size: 1.6rem;
+    }
+    .custom-col-right p {
+        font-size: 1rem;
+    }
+}
+
+/* Extra small mobile adjustments */
+@media (max-width: 767px) {
+    .custom-row {
+        flex-direction: column;
+    }
+    .move-right {
+        flex-direction: column-reverse;
+    }
+    .custom-title {
+        font-size: 1.5rem;
+    }
+    .custom-description {
+        font-size: 0.95rem;
+    }
+    .custom-img, .custom-img2 {
+        max-width: 250px;
+    }
+    .custom-col-right h3 {
+        font-size: 1.3rem;
+    }
+    .custom-col-right p {
+        font-size: 0.95rem;
+    }
+    .custom-col-right {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+</style>
+
+{% endblock %}

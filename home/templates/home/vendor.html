@@ -1,0 +1,353 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %}
+<br><br><br><br><br>
+
+<!-- Request for Supply of Goods on Credit -->
+<section class="section-bg" id="Request-credit">
+    <div class="container">
+      <div class="contact-form">
+        <form id="creditForm" onsubmit="sendEmail(event)">
+          <h3 class="form-title">Request for Supply of Goods on Credit</h3>
+          <br>
+          <h5 class="form-title2">Customer Data:</h5>
+          
+          <div class="form-group">
+            <input placeholder="Name of Organization (as mentioned in Commercial Registration)" type="text" id="organizationName" name="organizationName" class="form-control" required>
+          </div>
+          <div class="form-group d-flex gap-2">
+            <input placeholder="Main Commercial Registration Number" type="text" id="mainCRN" name="mainCRN" class="form-control" required>
+            <input placeholder="Commercial Register Expiry Date" type="text" id="CRexpiryDate" name="CRexpiryDate" class="form-control" required>
+            <input placeholder="Unified Facility Number" type="text" id="UIN" name="UIN" class="form-control" required>
+          </div>
+          <div class="form-group d-flex gap-2">
+            <input placeholder="VAT Registration Number" type="text" id="vatRegNumber" name="vatRegNumber" class="form-control" required>
+            <input placeholder="Legal Entity of the Company (eg: Sole proprietorship, partnership, limited liability company LLC ...etc.)" type="text" id="legEnt" name="legEnt" class="form-control" required>
+            <input placeholder="Chamber of Commerce Membership Number" type="text" id="chamberNumber" name="chamberNumber" class="form-control" required>
+          </div>
+          <br>
+          <h5 class="form-title2">Facility address and official approved contact information:</h5>
+          <div class="form-group d-flex gap-2">
+            <input placeholder="City" type="text" id="city" name="city" class="form-control" required>
+            <input placeholder="Neighborhood" type="text" id="neighborhood" name="neighborhood" class="form-control" required>
+            <input placeholder="Street" type="text" id="street" name="street" class="form-control" required>
+          </div>
+          <div class="form-group d-flex gap-2">
+            <input placeholder="mailbox" type="text" id="mailbox" name="mailbox" class="form-control" required>
+            <input placeholder="Zip Code" type="text" id="zipCode" name="zipCode" class="form-control" required>
+            <input placeholder="Additional number" type="text" id="addNumb" name="addNumb" class="form-control" required>
+          </div>
+          <div class="form-group d-flex gap-2">
+            <input placeholder="Certified email" type="Email" id="authSignatoryName" name="authSignatoryName" class="form-control" required>
+            <input placeholder="Inline Phone" type="tel" id="subject" name="subject" 
+            class="form-control" required pattern="[0-9]+" 
+            onkeypress="return /[0-9]/i.test(event.key)">     
+            <input placeholder="Phone Number" type="tel" id="subject" name="subject" 
+            class="form-control" required pattern="[0-9]+" 
+            onkeypress="return /[0-9]/i.test(event.key)">
+            <input placeholder="Additional Phone Number" type="tel" id="subject" name="subject" 
+            class="form-control" required pattern="[0-9]+" 
+            onkeypress="return /[0-9]/i.test(event.key)">
+          </div>
+          <br>
+          <h5 class="form-title2">Upload required documents for opening an account (only PDF with less than 5 MB for each file):</h5>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-4">
+                <label for="pdf1">Main Commercial Registration</label>
+                <input type="file" id="pdf1" name="pdf1" accept=".pdf" class="form-control" required>
+              </div>
+              <div class="col-md-4">
+                <label for="pdf2">Business License</label>
+                <input type="file" id="pdf2" name="pdf2" accept=".pdf" class="form-control" required>
+              </div>
+              <div class="col-md-4">
+                <label for="pdf3">VAT Registration Certificate </label>
+                <input type="file" id="pdf3" name="pdf3" accept=".pdf" class="form-control" required>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-4">
+                <label for="pdf4">Articles of Association</label>
+                <input type="file" id="pdf4" name="pdf4" accept=".pdf" class="form-control" required>
+              </div>
+              <div class="col-md-4">
+                <label for="pdf5">National Address</label>
+                <input type="file" id="pdf5" name="pdf5" accept=".pdf" class="form-control" required>
+              </div>
+              <div class="col-md-4">
+                <label for="pdf6">Location Map from Google coordinates</label>
+                <input type="file" id="pdf6" name="pdf6" accept=".pdf" class="form-control" required>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-4">
+                <label for="pdf7">Manager ID </label>
+                <input type="file" id="pdf7" name="pdf7" accept=".pdf" class="form-control" required>
+              </div>
+              <div class="col-md-4">
+                <label for="pdf8">Chairman of the Board of Directors ID </label>
+                <input type="file" id="pdf8" name="pdf8" accept=".pdf" class="form-control" required>
+              </div>
+              <div class="col-md-4">
+                <label for="pdf9">Order book</label>
+                <input type="file" id="pdf9" name="pdf9" accept=".pdf" class="form-control" required>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Mode of payment -->
+        
+          <div class="form-group">
+            <h5 class="form-title2"> Mode of Payment: </h5>
+              <div class="checkbox-group">
+              <label class="checkbox-choice">
+                <input type="checkbox" name="paymentMode" value="Credit Card">
+                Bank Transfer
+              </label>
+              <label class="checkbox-choice">
+                <input type="checkbox" name="paymentMode" value="Bank Transfer">
+                Check
+              </label>
+              <label class="checkbox-choice">
+                <input type="checkbox" name="paymentMode" value="Cash">
+                Payment in cash according to an approved receipt
+              </label>
+            </div>
+          </div>
+  
+  
+          <br>
+          <h5 class="form-title2"> Facility Management Data(client):</h5>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-4">
+                <input placeholder="Name of the General Manager" type="text" id="gmName" name="gmName" class="form-control" required>
+              </div>
+              <div class="col-md-4">
+                <input placeholder="Nationality" type="text" id="gmNationality" name="gmNationality" class="form-control" required>
+              </div>
+              <div class="col-md-4">
+                <input placeholder="ID Number" type="text" id="gmID" name="gmID" class="form-control" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-4">
+                <input placeholder="Phone Number" type="tel" id="gmPhone" name="gmPhone" 
+                class="form-control" required pattern="[0-9]+" 
+                onkeypress="return /[0-9]/i.test(event.key)">
+              </div>
+              <div class="col-md-4">
+                <input placeholder="Email" type="email" id="gmEmail" name="gmEmail" class="form-control" required>
+              </div>
+              <div class="col-md-4">
+                <input placeholder="City of residence" type="text" id="gmCity" name="gmCity" class="form-control" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-4">
+                <input placeholder="Neighborhood" type="text" id="gmNeighborhood" name="gmNeighborhood" class="form-control" required>
+              </div>
+              <div class="col-md-4">
+                <input placeholder="Street" type="text" id="gmStreet" name="gmStreet" class="form-control" required>
+              </div>
+              <div class="col-md-4">
+                <input placeholder="Mailbox" type="text" id="gmMailbox" name="gmMailbox" class="form-control" required>
+              </div>
+            </div>
+          </div>
+          <br>
+  
+                <form id="dynamicForm">
+                  <h5 class="form-title2">Data of the Facilitys Owners (Clients) </h5>
+                  
+                  <!-- Dropdown List -->
+                  <div class="form-group">
+                    <label for="options">Choose a facility category:</label>
+                    <select id="options" class="form-control" onchange="toggleFormGroup()">
+                      <option value="">-- Select an option --</option>
+                      <option value="business">(One person limited liability company) or (One-person closed joint-stock company)</option>
+                      <option value="individual">Limited Liability Company (LLC)</option>
+                    </select>
+                  </div>
+          
+                  <!-- First option -->
+                  <div class="form-group" id="business-group" style="display: none;">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <input type="text" placeholder="Owner Name" class="form-control" required>
+                        </div>
+                        <div class="col-md-4">
+                          <input type="text" placeholder="Nationality" class="form-control" required>
+                        </div>
+                        <div class="col-md-4">
+                          <input type="text" placeholder="ID Number" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <input type="tel" placeholder="Phone Number" class="form-control" required pattern="[0-9]+" onkeypress="return /[0-9]/i.test(event.key)">
+                        </div>
+                        <div class="col-md-4">
+                          <input type="email" placeholder="Email" class="form-control" required>
+                        </div>
+                        <div class="col-md-4">
+                          <input type="text" placeholder="City of Residence" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <input type="text" placeholder="Neighborhood" class="form-control" required>
+                        </div>
+                        <div class="col-md-4">
+                          <input type="text" placeholder="Street" class="form-control" required>
+                        </div>
+                        <div class="col-md-4">
+                          <input type="text" placeholder="Mailbox" class="form-control" required>
+                        </div>
+                      </div>
+                  </div>
+          
+                  <!-- Second Form Group -->
+                  <div class="form-group" id="individual-group" style="display: none;">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <input type="text" placeholder="Partner Name" class="form-control" required>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="text" placeholder="His Nationality" class="form-control" required>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="text" placeholder="His ID Number" class="form-control" required>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="tel" placeholder="His Phone Number" class="form-control" required pattern="[0-9]+" onkeypress="return /[0-9]/i.test(event.key)">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <input type="text" placeholder="Partner Name" class="form-control" required>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="text" placeholder="His Nationality" class="form-control" required>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="text" placeholder="His ID Number" class="form-control" required>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="tel" placeholder="His Phone Number" class="form-control" required pattern="[0-9]+" onkeypress="return /[0-9]/i.test(event.key)">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <input type="text" placeholder="Name of the legal entity registered in the commercial register" class="form-control" required>
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" placeholder="Address" class="form-control" required>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <input type="text" placeholder="Name of the General Manager as recorded in the commercial register" class="form-control" required>
+                      </div>
+                      <div class="col-md-6">
+                        <input type="tel" placeholder="Phone number" class="form-control" required pattern="[0-9]+" onkeypress="return /[0-9]/i.test(event.key)">
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+  
+                  <h5 class="form-title2">Data of those authorized to sign for purchases and issuance of conformities at the facility (client):</h5>
+                  <h5 class="form-title3">
+                  1- The client (Facility) acknowledges that all persons whose data are included in the authority table have each of them individually full authority to sign purchase requests and orders regardless of their value, and the client acknowledges that each of the persons whose data are included in the table individually has the authority to sign the reconciliations and settlements on the client’s accounts in favor of the Golden Meat International Company regardless of their financial value, and the signature of any of them on any product reconciliation shall have its regulatory effects and be an argument against the client, and the general manager may not cancel any authority or object to any action issued by his representatives whose data are included in this item after signing the form.
+                  </h5>
+                  <h5 class="form-title3">
+                  2- The reconciliations shall be approved by virtue of the official seal of the Facility (the client), and the client has agreed to this without any objection....
+                  </h5>
+  
+  
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Job title</th>
+                        <th>Name</th>
+                        <th>Nationality</th>
+                        <th>ID number</th>
+                        <th>Phone number</th>
+                        <th>Email</th>
+                        <th>Certified Signature Form</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td contenteditable="false">General Manager</td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                      </tr>
+                      <tr>
+                        <td contenteditable="false">Chief Financial Officer</td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                      </tr>
+                      <tr>
+                        <td contenteditable="false">Account Manager</td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                      </tr>
+                      <tr>
+                        <td contenteditable="false">Purchasing Manager</td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                      </tr>
+                      <tr>
+                        <td contenteditable="false">storekeeper</td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h5 class="form-title3">
+                    3- The client acknowledges, according to the signature of his legal representative, that he has reviewed the company’s bank account data and that he is the one who carries out bank transfers from the facility's bank account, and that this account is owned by him, and he releases the company from any operations carried out from any other bank account to the company’s account other than financial claims related to the facilities granted to him, and the client acknowledges that he has provided the company with copies of the IBAN certificate including the facility’s bank account data.
+                    </h5>
+                </form>
+  
+          <button type="submit" class="btn btn-send-msg">
+            <img src="{% static 'img/icons/logo.png' %}" alt="Logo" style="width: 20px; height: 20px;"> Send Request
+          </button>
+        </form>
+        
+      </div>
+    </div>
+  <section>
+{% endblock %}

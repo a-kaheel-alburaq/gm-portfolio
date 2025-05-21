@@ -1,0 +1,294 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="desktop-view-products">
+    <section id="portfolio" class="portfolio col-lg-12">
+        <div class="container">
+            <section id="portfolio" class="portfolio">
+                <div class="container first-filter">
+                    {% comment %} <div class="section-title" data-aos="fade-up">
+                        <h2>Products</h2>
+                        <p>Check out our products</p>
+                    </div> {% endcomment %}
+                    <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    </div>
+                    <span class="icon-span">
+                        <div class="col-lg-9">
+                            <ul id="portfolio-flters1">
+                                <span class="icon-span">
+                                    {% comment %} <a href="{% url 'meats' %}"> {% endcomment %}
+                                        <a href="#">
+                                            <li>
+                                                <div class="icon-container">
+                                                    <img src="{% static 'img/icons/all.svg' %}" class="filter-icon"
+                                                        alt="All Icon" />
+                                                    <p>All</p>
+                                                </div>
+                                            </li>
+                                        </a>
+                                </span>
+                                <span class="icon-span">
+                                    <a href="{% url 'meats' %}">
+                                        <li>
+                                            <div class="icon-container">
+                                                <img src="{% static 'img/icons/2.svg' %}" class="filter-icon meat-icon"
+                                                    alt="All Icon" />
+                                                <p style="color:  #fdb417;">Meat</p>
+                                            </div>
+                                        </li>
+                                    </a>
+                                </span>
+                                <span class="icon-span">
+                                    {% comment %} <a href="{% url 'dairy' %}"> {% endcomment %}
+                                        <a href="#">
+                                            <li>
+                                                <div class="icon-container">
+                                                    <img src="{% static 'img/icons/Dairy.svg' %}" class="filter-icon"
+                                                        alt="All Icon" />
+                                                    <p>Dairy</p>
+                                                </div>
+                                            </li>
+                                        </a>
+                                </span>
+                                <span class="icon-span">
+                                    {% comment %} <a href="{% url 'oils' %}"> {% endcomment %}
+                                        <a href="#">
+                                            <li>
+                                                <div class="icon-container">
+                                                    <img src="{% static 'img/icons/oils2.svg' %}" class="filter-icon"
+                                                        alt="All Icon" />
+                                                    <p>Oils</p>
+                                                </div>
+                                            </li>
+                                        </a>
+                                </span>
+                                <span class="icon-span">
+                                    {% comment %} <a href="{% url 'others' %}"> {% endcomment %}
+                                        <a href="#">
+                                            <li>
+                                                <div class="icon-container">
+                                                    <img src="{% static 'img/icons/others.svg' %}" class="filter-icon"
+                                                        alt="All Icon" />
+                                                    <p>Others</p>
+                                                </div>
+                                            </li>
+                                        </a>
+                                </span>
+                            </ul>
+                        </div>
+                </div>
+            </section>
+            {% comment %} <div class="section-title" data-aos="fade-up">
+                <p>Check out our diverse products</p>
+            </div>
+            {% endcomment %}
+            <div class="row inner-filter">
+                <div>
+                    <ul id="portfolio-flters">
+                        <li data-filter="*">
+                            <div class="icon-container">
+                                <img src="{% static 'img/icons/all.svg' %}" class="filter-icon" alt="All Icon" />
+                            </div>
+                            <p>All</p>
+                        </li>
+                        <li data-filter=".filter-beef" class="filter-active">
+                            <div class="icon-container">
+                                <img src="{% static 'img/icons/beef-meat.svg' %}" class="filter-icon"
+                                    alt="Beef Meat Icon" />
+                            </div>
+                            <p>Beef Meat</p>
+                        </li>
+                        <li data-filter=".filter-dairy">
+                            <div class="icon-container">
+                                <img src="{% static 'img/icons/lamb-meat.svg' %}" class="filter-icon"
+                                    alt="Lamb Meat Icon" />
+                            </div>
+                            <p>Lamb Meat</p>
+                        </li>
+                        <li data-filter=".filter-VF">
+                            <div class="icon-container">
+                                <img src="{% static 'img/icons/goat.svg' %}" class="filter-icon" alt="Goat Icon" />
+                            </div>
+                            <p>Goat</p>
+                        </li>
+                        <li data-filter=".filter-oils">
+                            <div class="icon-container">
+                                <img src="{% static 'img/icons/chicken.svg' %}" class="filter-icon"
+                                    alt="Chicken Icon" />
+                            </div>
+                            <p>Chicken</p>
+                        </li>
+                        <li data-filter=".filter-others">
+                            <div class="icon-container">
+                                <img src="{% static 'img/icons/duck.svg' %}" class="filter-icon" alt="Duck Icon" />
+                            </div>
+                            <p>Duck</p>
+                        </li>
+                        <li data-filter=".filter-others">
+                            <div class="icon-container">
+                                <img src="{% static 'img/icons/ostrich.svg' %}" class="filter-icon"
+                                    alt="Ostrich Icon" />
+                            </div>
+                            <p>Ostrich</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-3 vertical-filter">
+                    <ul id="vertical-filter" style="box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+                        <div class="filters">
+                            <div class="filter-group">
+                                <button class="filter-toggle" style="text-align: center;">
+                                    All
+                                </button>
+                            </div>
+                            <!-- Job Location Filter -->
+                            <div class="filter-group">
+                                <button class="filter-toggle">
+                                    Animal Type
+                                    <i class="fas fa-chevron-down toggle-arrow"></i>
+                                </button>
+                                <div class="filter-options">
+                                    <input type="checkbox" id="location1" checked><label
+                                        for="location1">BEEF</label><br>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'img/gallery/gallery-1-1.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-links">
+                            <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>BEEF</h4>
+                            <p>SIRLOIN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'img/gallery/gallery-1-2.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-links">
+                            <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>BEEF</h4>
+                            <p>TOP TENDER STEAK</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'img/gallery/gallery-1-3.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-links">
+                            <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>BEEF</h4>
+                            <p>PORTERHOUSE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'img/gallery/gallery-1-4.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-links">
+                            <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>BEEF</h4>
+                            <p>TENDERLOIN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'img/gallery/gallery-1-5.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-links">
+                            <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>BEEF</h4>
+                            <p>TOMAHAWK</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'img/gallery/gallery-1-6.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-links">
+                            <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>BEEF</h4>
+                            <p>RIB EYE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'img/gallery/gallery-1-7.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-links">
+                            <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>BEEF</h4>
+                            <p>FLANK STEAK</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'img/gallery/gallery-1-8.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-links">
+                            <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>BEEF</h4>
+                            <p>T-BONE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'img/gallery/gallery-1-9.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-links">
+                            <a href="#" title="Shop now"><i class="icofont-link"></i></a>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>BEEF</h4>
+                            <p>RUMP STEAK</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- End Portfolio Section -->
+</div>
+{% include 'home/mobile/meats.html' %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const filterToggles = document.querySelectorAll('.filter-toggle');
+
+        filterToggles.forEach(toggle => {
+            toggle.addEventListener('click', function () {
+                const filterGroup = this.closest('.filter-group');
+                filterGroup.classList.toggle('open');
+            });
+        });
+    });
+</script>
+
+{% endblock %}

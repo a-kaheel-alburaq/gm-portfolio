@@ -1,0 +1,91 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %} 
+
+<div class="saudi-vision-page">
+  <!-- Hero Section -->
+  <section id="hero2" class="d-flex align-items-center">
+      <div class="image-background">
+        <img src="{% static 'img/saudi_vision_2030.png' %}" class="fade-in">
+      </div>
+        <div class="container">
+        <div class="row">
+          <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
+            <br>
+            <br>
+            
+          </div>
+        </div>
+      </div>
+  </section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <!-- Vision Description -->
+  <section class="vision-section" data-aos="fade-up" >
+      <div class="container">
+          <div class="section-header">
+              <i class="fas fa-lightbulb"></i>
+              <h2 class="section-title">Our Commitment to Vision 2030</h2>
+          </div>
+          <p class="vision-description">
+              At Golden meat, we are deeply committed to implementing the pillars of Saudi Vision 2030 in our company.
+          </p>
+      </div>
+  </section>
+
+  <!-- Key Pillars -->
+  <section class="vision-pillar-section" data-aos="fade-up" >
+      <div class="container">
+          <div class="section-header">
+              <i class="fas fa-cogs"></i>
+              <h2 class="section-title">Key Pillars in Action</h2>
+          </div>
+          <div class="row">
+              <div class="col-md-4">
+                  <div class="pillar-card">
+                      <h3 style="  border-top: 4px solid #fdb417;">Thriving Economy</h3>
+                      <p>Investing in diversification, startups, and global markets.</p>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="pillar-card">
+                      <h3>Empowering People</h3>
+                      <p>Fostering local talent and workforce development.</p>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="pillar-card">
+                      <h3>Sustainable Development</h3>
+                      <p>Driving eco-friendly practices and renewable energy adoption.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Vision Goals -->
+  <section class="vision-goals-section" data-aos="fade-up" >
+      <div class="container">
+          <div class="section-header">
+              <i class="fas fa-check-circle"></i>
+              <h2 class="section-title">Goals Achieved</h2>
+          </div>
+          <ul class="vision-description" style="border-top: 4px solid #fdb417;">
+              <li>Reducing unemployment through talent acquisition and training.</li>
+              <li>Expanding non-oil revenues by growing product offerings.</li>
+              <li>Implementing green initiatives to conserve resources.</li>
+          </ul>
+      </div>
+  </section>
+</div>
+
+<script>
+    const vhToPx = (vh) => (vh / 100) * window.innerHeight;
+    console.log(vhToPx(70)); // Outputs the pixel value
+</script>
+{% endblock %}

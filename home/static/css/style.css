@@ -134,6 +134,19 @@ input[type="date"]:valid+.date-placeholder {
   align-items: center;
 }
 
+
+.social-frame-tiktok {
+  width: 1060px;
+  height: 370px;
+  border: 3px solid #ddad52;
+  border-radius: 15px;
+  overflow: hidden;
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .social-container {
   display: flex;
   justify-content: center;
@@ -200,7 +213,6 @@ input[type="date"]:valid+.date-placeholder {
     align-items: center;
   }
 }
-
 
 /*--------------------------------------------------------------
 # Install our apps (in footer)

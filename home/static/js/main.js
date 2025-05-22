@@ -436,3 +436,26 @@ $(document).ready(function () {
     autoplayTimeout: 5000
   });
 });
+
+
+$(document).ready(function () {
+  $('.products-mobile-carousel').owlCarousel({
+    loop: true,
+    margin: 15,
+    nav: false,
+    dots: true,
+    autoplay: false,
+    arrow: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      576: {
+        items: 2
+      },
+      992: {
+        items: 3
+      }
+    }
+  });
+});

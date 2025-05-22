@@ -1658,7 +1658,7 @@ div .row.inner-filter {
   border-bottom: 2px solid #fdb417;
   /* margin: 72px 0 -72px 0; */
   /* overflow: hidden; */
-  /* Ensures the video doesn’t overflow out of the section */
+  /* Ensures the video doesn't overflow out of the section */
   z-index: 1;
 }
 
@@ -2762,7 +2762,7 @@ section {
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  /* Ensure it’s on top */
+  /* Ensure it's on top */
   padding: 20px;
 }
 
@@ -2988,7 +2988,7 @@ section {
   /* border-bottom: 2px solid #fdb417; */
   /* margin: 72px 0 -72px 0; */
   /* overflow: hidden; */
-  /* Ensures the video doesn’t overflow out of the section */
+  /* Ensures the video doesn't overflow out of the section */
   z-index: 1;
 }
 
@@ -5799,7 +5799,28 @@ html body main section {
 branch cards
 --------------------------------------------------------------*/
 .row.branch-cards.mobile-only {
-  display: none;
+  display: none !important;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-only {
+    display: block !important;
+  }
+
+  .desktop-view-products {
+    display: none !important;
+  }
+}
+
+/* Ensure mobile carousel is hidden on desktop */
+@media screen and (min-width: 768px) {
+
+  .products-mobile-carousel,
+  .portfolio-mobile,
+  #portfolio-flters-mobile,
+  .portfolio-mobile * {
+    display: none !important;
+  }
 }
 
 @media (max-width: 767px) {
@@ -6440,7 +6461,20 @@ Mobile navbar adjustment
   }
 }
 
+/*---------------------------------------------------------------------
+Mobile products 
+---------------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
 
+@media screen and (max-width: 767px) {
+  .desktop-view-products {
+    display: none !important;
+  }
+}
 
 
 /*---------------------------------------------------------------------

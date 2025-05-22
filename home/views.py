@@ -1,17 +1,29 @@
 from django.shortcuts import render
-from .models import Category, PortfolioItem
+from .models import Category, PortfolioItem, ProductCategory, Product
 from django.http import JsonResponse
 
 
 def get_subcategories(request, category_id):
     try:
-        main_category = Category.objects.get(id=category_id)
-        # Assuming `subcategories` is the related name for subcategories in your model
-        subcategories = main_category.subcategories.all()
-        data = [{'id': sub.id, 'name': sub.name} for sub in subcategories]
+        print(f"Fetching subcategories for category ID: {category_id}")  # Debug print
+        category = ProductCategory.objects.get(id=category_id)
+        subcategories = category.subcategories.filter(is_active=True).order_by('order')
+        print(f"Found {subcategories.count()} subcategories")  # Debug print
+        
+        data = [{
+            'id': sub.id,
+            'name': sub.name,
+            'filter_class': sub.filter_class,
+            'has_children': sub.subcategories.exists()
+        } for sub in subcategories]
+        print(f"Returning data: {data}")  # Debug print
         return JsonResponse({'subcategories': data})
-    except Category.DoesNotExist:
-        return JsonResponse({'subcategories': []})
+    except ProductCategory.DoesNotExist:
+        print(f"Category {category_id} not found")  # Debug print
+        return JsonResponse({'error': f'Category {category_id} not found'}, status=404)
+    except Exception as e:
+        print(f"Error: {str(e)}")  # Debug print
+        return JsonResponse({'error': str(e)}, status=500)
 
 def portfolio(request):
     # Fetch all categories and portfolio items
@@ -73,7 +85,27 @@ def saudi_vision(request):
 
 # Products Pages
 def meats(request):
-    return render(request, 'home/meats.html', )
+    # Get main categories (level 0)
+    main_categories = ProductCategory.objects.filter(
+        level=0,
+        is_active=True
+    ).order_by('order')
+    
+    print(f"Found {main_categories.count()} main categories")  # Debug print
+    for cat in main_categories:
+        print(f"Category: {cat.name} (ID: {cat.id})")  # Debug print
+
+    # Get all active products
+    products = Product.objects.filter(
+        category__is_active=True
+    ).select_related('category').order_by('category__order', 'order')
+    
+    context = {
+        'main_categories': main_categories,
+        'products': products,
+        'debug': True,  # Enable debug output in template
+    }
+    return render(request, 'home/meats.html', context)
 
 def dairy(request):
     return render(request, 'home/dairy.html', )

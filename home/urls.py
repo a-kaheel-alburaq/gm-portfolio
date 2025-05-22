@@ -26,7 +26,7 @@ urlpatterns = [
 
     # path('portfolio/', views.portfolio, name='portfolio'),
     # path('get_portfolio_items/<slug:category_slug>/', views.get_portfolio_items, name='get_portfolio_items'),
-    # path('get_subcategories/<int:category_id>/', views.get_subcategories, name='get_subcategories'),
+    path('get_subcategories/<int:category_id>/', views.get_subcategories, name='get_subcategories'),
     # path('products_/', views.products, name='products_all'),
     
     # Contact Us Dropdown Pages

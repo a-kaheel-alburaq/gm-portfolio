@@ -1,13 +1,20 @@
 # home/admin.py
 
 from django.contrib import admin
-# from .models import Category, PortfolioItem
+from .models import ProductCategory, Product
 
-# class CategoryAdmin(admin.ModelAdmin):
-#     list_display = ('name', 'slug', 'image')  # Display name, slug, and image in the admin list view
+@admin.register(ProductCategory)
+class ProductCategoryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'filter_class', 'order', 'is_active')
+    list_editable = ('order', 'is_active')
+    search_fields = ('name',)
+    list_filter = ('is_active',)
+    ordering = ('order',)
 
-# class PortfolioItemAdmin(admin.ModelAdmin):
-#     list_display = ('title', 'category', 'image', 'link')  # Display title, category, image, and link in the admin list view
-
-# admin.site.register(Category, CategoryAdmin)
-# admin.site.register(PortfolioItem, PortfolioItemAdmin)
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ('name', 'category', 'shop_link', 'order', 'is_active')
+    list_editable = ('order', 'is_active')
+    list_filter = ('category', 'is_active')
+    search_fields = ('name', 'description')
+    ordering = ('category', 'order')

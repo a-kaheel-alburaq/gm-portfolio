@@ -146,3 +146,46 @@ def branches(request):
 
 def vendor(request):
     return render(request, 'home/vendor.html')
+
+def get_all_subcategories(request):
+    # First get all level 1 categories (subcategories)
+    subcategories = ProductCategory.objects.filter(
+        level=1,  # Only get level 1 categories
+        is_active=True
+    ).select_related('parent').order_by('order')
+    
+    # Group subcategories by their parent (main category)
+    grouped_data = {}
+    
+    for subcategory in subcategories:
+        main_category = subcategory.parent
+        
+        if main_category and main_category.is_active:
+            if main_category.id not in grouped_data:
+                grouped_data[main_category.id] = {
+                    'id': main_category.id,
+                    'name': main_category.name,
+                    'filter_class': main_category.filter_class,
+                    'subcategories': []
+                }
+            
+            # Check for level 2 subcategories
+            has_children = ProductCategory.objects.filter(
+                parent=subcategory,
+                level=2,
+                is_active=True
+            ).exists()
+            
+            subcat_data = {
+                'id': subcategory.id,
+                'name': subcategory.name,
+                'filter_class': subcategory.filter_class,
+                'has_children': has_children
+            }
+            grouped_data[main_category.id]['subcategories'].append(subcat_data)
+    
+    # Convert the grouped data to a list
+    categories_data = list(grouped_data.values())
+    
+    print("Returning categories data:", categories_data)  # Debug print
+    return JsonResponse({'categories': categories_data})

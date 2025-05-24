@@ -3,6 +3,8 @@
 
 {% block content %}
 <style>
+  
+
     .meat-text {
         color: #fdb417;
     }
@@ -14,6 +16,10 @@
         background: white;
         border-radius: 8px;
         padding: 0;
+    }
+    .vertical-filter-container {
+        margin-left: -300px;
+        margin-bottom: 1%;
     }
     .all-filter-btn {
         text-align: left;
@@ -28,7 +34,7 @@
         transition: all 0.3s ease;
     }
     .all-filter-btn:hover {
-        background-color: #fff8e8;
+        background-color: #fdb417;
     }
     .all-filter-btn.active {
         background: #fdb417;
@@ -48,9 +54,11 @@
         align-items: center;
         color: #444;
         cursor: pointer;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
     .filter-toggle:hover {
-        background-color: #fff8e8;
+        background-color: #fdb417;
     }
     .filter-toggle.active {
         background-color: #fdb417;
@@ -235,7 +243,7 @@
                 </div>
             </div>
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-lg-3">
+                <div class="col-lg-3 vertical-filter-container">
                     <div id="vertical-filter" class="vertical-filter-box">
                         <button class="all-filter-btn">
                             All Categories
@@ -248,7 +256,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-9">
+                <div class="col-lg-12">
                     <div class="row">
                         {% for product in products %}
                         <!-- Debug: Product {{ product.name }} - Category: {{ product.category.name }} - Filter Class: {{ product.category.filter_class }} -->
@@ -285,6 +293,27 @@
         let activeSubcategories = new Set();
         let selectedMainCategoryId = null;
         const allCategoriesBtn = document.querySelector('.all-filter-btn');
+
+        // Add click handler for All Categories button
+        allCategoriesBtn.addEventListener('click', function() {
+            // Clear all active subcategories
+            activeSubcategories.clear();
+            
+            // Remove checked state from all subcategory checkboxes
+            document.querySelectorAll('.subcategory-checkbox').forEach(checkbox => {
+                checkbox.classList.remove('checked');
+            });
+            
+            // Add active class to All Categories button
+            this.classList.add('active');
+            
+            // Update the filtering to show all items
+            if (currentMainCategory === '*') {
+                iso.arrange({ filter: '*' });
+            } else {
+                iso.arrange({ filter: currentMainCategory });
+            }
+        });
 
         function updateFiltering() {
             let filterValue;
@@ -374,6 +403,29 @@
                 });
         }
 
+        function loadSubSubcategories(subcatId, group) {
+            fetch(`/get_subcategories/${subcatId}/`)
+                .then(response => response.json())
+                .then(subData => {
+                    const subContainer = group.querySelector(`.subcategory-container-${subcatId}`);
+                    subContainer.innerHTML = '';
+                    if (subData.subcategories && subData.subcategories.length > 0) {
+                        subData.subcategories.forEach(subSubcat => {
+                            const subItem = createSubcategoryItem(subSubcat);
+                            // Check if this sub-subcategory was previously selected
+                            const filterClass = '.' + subSubcat.filter_class;
+                            if (activeSubcategories.has(filterClass)) {
+                                subItem.querySelector('.subcategory-checkbox').classList.add('checked');
+                            }
+                            subContainer.appendChild(subItem);
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading sub-subcategories:', error);
+                });
+        }
+
         function createSubcategoryGroup(subcat) {
             const filterGroup = document.createElement('div');
             filterGroup.className = 'filter-group';
@@ -395,32 +447,15 @@
             toggle.addEventListener('click', function(e) {
                 e.preventDefault();
                 const group = this.closest('.filter-group');
+                const wasOpen = group.classList.contains('open');
                 group.classList.toggle('open');
                 
-                if (subcat.has_children && group.classList.contains('open')) {
+                if (subcat.has_children && !wasOpen) {
                     loadSubSubcategories(subcat.id, group);
                 }
             });
             
             return filterGroup;
-        }
-
-        function loadSubSubcategories(subcatId, group) {
-            fetch(`/get_subcategories/${subcatId}/`)
-                .then(response => response.json())
-                .then(subData => {
-                    const subContainer = group.querySelector(`.subcategory-container-${subcatId}`);
-                    subContainer.innerHTML = '';
-                    if (subData.subcategories && subData.subcategories.length > 0) {
-                        subData.subcategories.forEach(subSubcat => {
-                            const subItem = createSubcategoryItem(subSubcat);
-                            subContainer.appendChild(subItem);
-                        });
-                    }
-                })
-                .catch(error => {
-                    console.error('Error loading sub-subcategories:', error);
-                });
         }
 
         function createSubcategoryItem(subcat) {
@@ -454,28 +489,7 @@
                     }
                 }
                 
-                // Update filtering based on current main category and active subcategories
-                let filterValue;
-                if (currentMainCategory === '*') {
-                    // If "All" is selected, only use subcategory filters
-                    filterValue = activeSubcategories.size > 0 ? 
-                        Array.from(activeSubcategories).join(', ') : '*';
-                } else {
-                    // If a main category is selected, combine it with subcategory filters
-                    if (activeSubcategories.size > 0) {
-                        // Create an array of combined filters
-                        const combinedFilters = Array.from(activeSubcategories).map(subFilter => 
-                            `${currentMainCategory}${subFilter}`
-                        );
-                        filterValue = combinedFilters.join(', ');
-                    } else {
-                        // If no subcategories selected, show all items from current main category
-                        filterValue = currentMainCategory;
-                    }
-                }
-                
-                console.log('Applying filter:', filterValue);
-                iso.arrange({ filter: filterValue });
+                updateFiltering();
             });
             
             return item;
